@@ -1,0 +1,32 @@
+@use "../../general/mixins" as *;
+
+.modal-contacts {
+  display: grid;
+  width: 402px;
+  max-width: 100%;
+  padding: 50px 16px;
+
+  gap: 48px;
+
+  @include up(sm) {
+    padding: 50px;
+  }
+
+  &__title {
+    @include font(16px, 19px, 600);
+    margin-bottom: 24px;
+  }
+
+  &__chats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+  }
+
+  &__phones {
+    display: grid;
+
+    gap: 20px;
+  }
+}

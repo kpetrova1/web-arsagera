@@ -1,0 +1,27 @@
+@use "../general/mixins" as *;
+
+.tab-scroll {
+  display: flex;
+
+  background-color: var(--white);
+
+  gap: 4px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--blue);
+
+    &:disabled {
+      color: var(--gray-tech);
+    }
+  }
+}

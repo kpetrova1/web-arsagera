@@ -1,0 +1,63 @@
+@use "../../general/mixins" as *;
+
+.modal-registration {
+  padding: 32px 16px;
+
+  @include up(sm) {
+    padding: 32px;
+  }
+
+  &__title {
+    @include font(18px, 22px, 600);
+    margin-bottom: 20px;
+
+    color: var(--orange);
+  }
+
+  &__form {
+    display: grid;
+    width: 836px;
+    max-width: 100%;
+
+    gap: 24px;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+
+  &__code {
+    display: grid;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+    @include up(sm) {
+      grid-template-columns: 250px 1fr;
+    }
+  }
+
+  &__feedback {
+    display: grid;
+    width: 396px;
+    max-width: 100%;
+
+    gap: 24px;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}

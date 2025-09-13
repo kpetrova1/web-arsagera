@@ -1,0 +1,40 @@
+@use "../general/mixins" as *;
+
+.action-button {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 50px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background-color: var(--gray-bg);
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &__badge {
+    @include font(16px, 22px, 400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    margin-top: 4px;
+    margin-right: 4px;
+
+    border-radius: 22px;
+
+    background-color: var(--orange);
+
+    color: var(--white);
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@use "../general/mixins" as *;
+
+.comments {
+  $root: &;
+
+  &__title {
+    @include font(18px, 22px, 600);
+
+    color: var(--orange);
+  }
+
+  &__form {
+    display: grid;
+    margin-top: 30px;
+
+    gap: 16px;
+  }
+
+  &__form-grid {
+    display: grid;
+    align-items: start;
+
+    gap: 16px;
+
+    @include up(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__form-hint {
+    @include font(14px, 18px, 400);
+    order: -1;
+
+    @include up(md) {
+      order: initial;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    min-height: 39px;
+    max-height: 600px;
+    overflow: hidden;
+
+    resize: none;
+  }
+
+  &__button {
+    min-width: 140px;
+
+    justify-self: end;
+  }
+
+  &__list {
+    display: grid;
+    margin: 40px 0 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 24px;
+  }
+
+  &__item {
+    display: grid;
+
+    gap: 16px;
+
+    @include up(lg) {
+      gap: 24px;
+    }
+
+    @include up(xl) {
+      gap: 12px;
+    }
+  }
+
+  &__answers {
+    @include up(sm) {
+      margin-left: 50px;
+    }
+
+    @include up(xl) {
+      margin-left: 75px;
+    }
+  }
+
+  &__answers-button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-dark);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+
+    cursor: pointer;
+
+    gap: 4px;
+
+    #{$root}__answers.is-open & {
+      color: var(--gray-main);
+    }
+  }
+
+  &__collapse-icon {
+    #{$root}__answers.is-open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__answers-list {
+    display: grid;
+    height: 0;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+
+    list-style: none;
+
+    gap: 24px;
+
+    #{$root}__answers.is-open & {
+      height: auto;
+      margin-top: 24px;
+      overflow: initial;
+    }
+  }
+}

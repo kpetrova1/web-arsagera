@@ -1,0 +1,21 @@
+// Default
+@use "./default/default";
+
+// Slider
+@use "@splidejs/splide/dist/css/splide.min.css";
+
+// Page styles
+@use "./layout/page";
+@use "./elements/file-link";
+@use "./elements/quote";
+@use "./elements/comment";
+@use "./elements/custom-tooltip";
+@use "./blocks/breadcrumbs";
+@use "./blocks/tabs";
+@use "./blocks/side-block";
+@use "./blocks/comments";
+@use "./blocks/reviews";
+@use "./blocks/book-side-block";
+@use "./blocks/podcast";
+@use "./blocks/course";
+@use "./blocks/slider";

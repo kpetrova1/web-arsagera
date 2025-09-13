@@ -1,0 +1,84 @@
+@use "../general/mixins" as *;
+
+.slider {
+  min-width: 0;
+
+  &__arrow {
+    display: flex;
+    top: 95px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+
+    transform: none;
+
+    transition: color 300ms;
+
+    border: 1px solid var(--gray-medium);
+
+    border-radius: 50%;
+
+    opacity: 1;
+
+    background-color: transparent;
+
+    color: var(--gray-medium);
+
+    @include hover {
+      border-color: var(--blue);
+
+      color: var(--blue);
+    }
+  }
+
+  .splide__arrow svg {
+    width: 11px;
+    height: 30px;
+  }
+
+  .splide__arrow--prev {
+    left: 0;
+
+    svg {
+      margin-left: -5px;
+
+      transform: scaleX(1);
+    }
+  }
+
+  .splide__arrow--next {
+    right: 0;
+
+    svg {
+      margin-right: -5px;
+
+      transform: scaleX(-1);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    width: 152px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    aspect-ratio: 0.66/1;
+  }
+
+  &__author {
+    @include font(14px, 20px, 400);
+    margin-bottom: 8px;
+  }
+
+  &__name {
+    @include font(14px, 20px, 700);
+  }
+}

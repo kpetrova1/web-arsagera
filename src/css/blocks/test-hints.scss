@@ -1,0 +1,39 @@
+@use "../general/mixins" as *;
+
+.test-hints {
+  display: grid;
+  align-items: start;
+
+  gap: 8px;
+
+  @include up(md) {
+    grid-template-columns: 254px 1fr;
+  }
+
+  @include up(xl) {
+    grid-template-columns: 341px 1fr;
+  }
+
+  &__image {
+    @include down(md) {
+      order: 2;
+    }
+  }
+
+  &__title {
+    @include font(16px, 22px, 500);
+
+    color: var(--gray-dark);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 6px;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../general/mixins" as *;
+
+.formula {
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+
+  &__table {
+    @include font(14px, 20px, 400);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 4px 12px;
+    overflow-x: auto;
+
+    border: 1px solid var(--gray-main);
+    border-radius: 4px;
+
+    text-align: center;
+
+    gap: 8px;
+
+    @include up(sm) {
+      @include font(16px, 26px);
+    }
+
+    &_light {
+      border: 2px solid var(--gray-light);
+    }
+  }
+
+  &__head {
+    grid-column: 1/-1;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid var(--blue);
+
+    color: var(--blue);
+  }
+
+  &__item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:first-child {
+      border-bottom: 1px solid var(--gray-main);
+    }
+  }
+
+  &__hint {
+    margin-top: 8px;
+
+    font-style: italic;
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+  }
+}

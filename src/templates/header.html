@@ -1,0 +1,119 @@
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <!-- Бургер-меню -->
+      <button class="header__burger" type="button" aria-label="Открыть меню" data-nav-toggle>
+        <svg class="header__burger-icon" viewBox="0 0 43 28" width="43" height="28" aria-hidden="true">
+          <use href="/sprite.svg#burger-icon"></use>
+        </svg>
+      </button>
+
+      <!-- Категории -->
+      <div class="header__categories">
+        <button
+          class="header__categories-toggle button button_white"
+          type="button"
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+          data-categories-toggle
+        >
+          <span class="header__categories-text">Клиентам</span>
+          <svg class="header__categories-arrow" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+            <use href="/sprite.svg#arrow-down-icon"></use>
+          </svg>
+        </button>
+
+        <ul class="header__categories-list" id="categories-dropdown" role="menu" aria-hidden="true">
+          <li class="header__categories-item is-hidden">
+            <a class="header__categories-link link link_gray-dark is-active" href="#" data-categories-link>Клиентам</a>
+          </li>
+          <li class="header__categories-item">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
+          </li>
+          <li class="header__categories-item">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Сотрудникам</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Поиск -->
+      <form class="header__search search" action="#" method="get" role="search">
+        <label class="search__label visually-hidden" for="search-input">Поиск по сайту</label>
+        <input
+          class="search__input"
+          id="search-input"
+          type="search"
+          name="q"
+          placeholder="Поиск по сайту"
+          aria-label="Поиск по сайту"
+        />
+        <button class="search__submit" type="submit" aria-label="Выполнить поиск">
+          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24" aria-hidden="true">
+            <use href="/sprite.svg#search-icon"></use>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Основная навигация -->
+      <nav class="header__nav nav" aria-label="Основное меню" data-header-nav>
+        <div class="nav__backdrop" data-nav-toggle></div>
+
+        <div class="nav__container">
+          <button class="nav__close" type="button" aria-label="Закрыть меню" data-nav-toggle>
+            <svg class="nav__close-icon" viewBox="0 0 39 38" width="26" height="26" aria-hidden="true">
+              <use href="/sprite.svg#cross-icon"></use>
+            </svg>
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link_home is-active" href="/src/pages/">
+                <svg class="nav__home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
+                  <use href="/sprite.svg#home-icon"></use>
+                </svg>
+                <span class="nav__home-text">Клиентам</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="/src/pages/about" aria-expanded="false" data-menu-dropdown-link>
+                О компании
+                <svg class="nav__dropdown-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+                  <use href="/sprite.svg#arrow-down-icon"></use>
+                </svg>
+              </a>
+              <ul class="nav__dropdown" aria-hidden="true">
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">История</a></li>
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Миссия</a></li>
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Общая информация</a></li>
+              </ul>
+            </li>
+
+            <li class="nav__item"><a class="nav__link" href="/src/pages/reports">Аналитика</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/lectures">Лекции и видео</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/book">Книга</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/articles">Статьи</a></li>
+            <li class="nav__item"><a class="nav__link" href="https://bf.arsagera.ru/">Блогофорум</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/faq">Ответы на вопросы</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/news-article">Конкурсы и акции</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/log">Раскрытие информации</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Мобильные действия -->
+      <div class="header__actions">
+        <button class="header__action" type="button" aria-label="Связь с нами" data-modal-button="modal-contacts">
+          <svg class="header__action-icon" viewBox="0 0 33 35" width="33" height="35" aria-hidden="true">
+            <use href="/sprite.svg#phone-icon"></use>
+          </svg>
+        </button>
+        <button class="header__action" type="button" aria-label="Открыть поиск" data-modal-button="modal-search">
+          <svg class="header__action-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <use href="/sprite.svg#search-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

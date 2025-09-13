@@ -1,0 +1,49 @@
+@use "../general/mixins" as *;
+
+.test-nav {
+  $root: &;
+  display: grid;
+
+  gap: 24px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    &_row {
+      flex-direction: row;
+    }
+
+    &_grid {
+      @include up(lg) {
+        display: grid;
+        grid-template-columns: 300px 570px;
+
+        gap: 12px;
+      }
+    }
+  }
+
+  &__title {
+    @include font(16px, 22px, 500);
+
+    color: var(--gray-dark);
+
+    #{$root}__group_row & {
+      padding-top: 8px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 6px;
+  }
+}

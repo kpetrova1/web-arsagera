@@ -1,0 +1,15 @@
+@use "./mixins" as *;
+
+@for $i from 1 through 20 {
+  .order-#{$i}-down-lg {
+    @include down(lg) {
+      order: #{$i};
+    }
+  }
+
+  .order-#{$i}-down-md {
+    @include down(md) {
+      order: #{$i};
+    }
+  }
+}

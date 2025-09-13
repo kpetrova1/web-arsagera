@@ -1,0 +1,47 @@
+<div class="modal is-hidden" id="modal-question" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-question"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-question">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-question">
+      <h2 class="modal-question__title">Вопрос на сайт</h2>
+
+      <form class="modal-question__form">
+        <label class="field">
+          <span class="field__label">Представьтесь, пожалуйста*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта или логин</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Задайте Ваш вопрос*</span>
+          <textarea class="modal-question__textarea field__input" required></textarea>
+        </label>
+        <div class="modal-question__code">
+          <label class="field">
+            <span class="field__label">Защитный код</span>
+            <input class="field__input" type="text" required />
+          </label>
+          <div class="modal-question__captcha">captcha</div>
+        </div>
+        <label class="option">
+          <input class="option__input" type="checkbox" required />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
+        </label>
+
+        <div class="modal-question__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="button button_orange button_full-width button_large" type="submit">Отправить вопрос</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

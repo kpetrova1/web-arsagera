@@ -1,0 +1,56 @@
+@use "../general/mixins" as *;
+
+.link {
+  @include font(16px, 20px, 400);
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+
+  transition: color 300ms;
+
+  border: none;
+
+  background-color: transparent;
+
+  gap: 8px;
+
+  &_size-large {
+    @include font(18px, 22px, 600);
+  }
+
+  &_size-small {
+    @include font(14px, 18px, 400);
+  }
+
+  &_gray {
+    color: var(--gray-main);
+
+    @include hover {
+      color: var(--orange);
+    }
+  }
+
+  &_gray-dark {
+    color: var(--gray-dark);
+
+    @include hover {
+      color: var(--orange);
+    }
+  }
+
+  &_orange {
+    color: var(--orange);
+
+    @include hover {
+      color: var(--gray-main);
+    }
+  }
+
+  &_blue {
+    color: var(--blue);
+
+    @include hover {
+      color: var(--orange);
+    }
+  }
+}

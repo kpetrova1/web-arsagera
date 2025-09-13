@@ -1,0 +1,23 @@
+@use "../general/mixins" as *;
+
+.poll {
+  &__options {
+    display: grid;
+    margin-bottom: 24px;
+
+    gap: 16px;
+  }
+
+  &__option {
+    .is-voted & {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 8px;
+    }
+
+    .is-voted & input {
+      display: none;
+    }
+  }
+}

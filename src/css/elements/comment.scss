@@ -1,0 +1,180 @@
+@use "../general/mixins" as *;
+
+.comment {
+  $root: &;
+
+  &__header {
+    display: grid;
+    grid-template-areas:
+      "image name"
+      "image date";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    min-height: 40px;
+
+    @include up(sm) {
+      grid-template-areas: "image name date";
+      grid-template-columns: auto auto 1fr;
+    }
+  }
+
+  &__author-img {
+    grid-area: image;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    overflow: hidden;
+
+    border-radius: 100%;
+  }
+
+  &__author-name {
+    grid-area: name;
+
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+
+    @include up(sm) {
+      margin-right: 8px;
+    }
+
+    @include up(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__date {
+    grid-area: date;
+
+    color: var(--gray-medium2);
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  &__wysiwyg {
+    margin-top: 10px;
+
+    color: var(--gray-main);
+    font-size: 14px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+
+    @include up(lg) {
+      font-size: 16px;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 10px;
+
+      background-color: #f1f1f1;
+
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.17;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    margin-top: 8px;
+
+    gap: 12px;
+
+    @include up(sm) {
+      grid-template-columns: auto 1fr;
+
+      gap: 8px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+
+    gap: 8px;
+  }
+
+  &__rating-button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    transition: color 0.2s linear;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-medium2);
+
+    cursor: pointer;
+
+    gap: 4px;
+
+    @include hover {
+      color: var(--gray-dark);
+    }
+
+    &:disabled {
+      color: var(--gray-medium2);
+
+      cursor: not-allowed;
+    }
+  }
+
+  &__rating-icon {
+    &_up {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__controls {
+    display: flex;
+
+    gap: 12px;
+  }
+
+  &__control {
+    &-edit {
+      display: none;
+    }
+
+    &-delete {
+      display: none;
+    }
+
+    &-answer {
+      display: block;
+
+      color: var(--gray-medium2);
+    }
+  }
+}
+
+.comments.is-auth .comment .comment__control-answer {
+  color: var(--gray-dark);
+}
+
+.comments.is-auth .comment.is-author .comment__control-delete {
+  display: block;
+}
+
+.comments.is-auth .comment.is-author .comment__control-edit {
+  display: block;
+}
+
+.comments.is-auth .comment.is-author .comment__control-answer {
+  display: none;
+}
+
+.comments.is-auth .comment.is-author .comment__author-name {
+  color: var(--gray-dark);
+}

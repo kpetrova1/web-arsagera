@@ -1,0 +1,8 @@
+@use "../general/mixins" as *;
+
+.table-scroll {
+  position: relative;
+  overflow: auto hidden;
+
+  white-space: nowrap;
+}

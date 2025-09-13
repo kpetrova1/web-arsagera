@@ -1,0 +1,10 @@
+@use "./default/default";
+
+// Page styles
+@use "./layout/page";
+@use "./blocks/breadcrumbs";
+@use "./blocks/table-scroll";
+@use "./blocks/table";
+@use "./blocks/side-block";
+@use "./blocks/comments";
+@use "./blocks/prize-poll";

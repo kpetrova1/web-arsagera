@@ -1,0 +1,22 @@
+@use "../general/mixins" as *;
+
+.product-files {
+  display: grid;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 16px 24px;
+
+  @include up(sm) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  &_column-2 {
+    grid-template-columns: 1fr;
+
+    @include up(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

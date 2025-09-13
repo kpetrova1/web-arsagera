@@ -1,0 +1,8 @@
+@use "./default/default";
+
+// Page styles
+@use "./layout/page";
+@use "./elements/pagination";
+@use "./blocks/tabs";
+@use "./blocks/message";
+@use "./blocks/breadcrumbs";

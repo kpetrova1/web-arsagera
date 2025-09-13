@@ -1,0 +1,40 @@
+@use "../general/mixins" as *;
+
+.file-link {
+  $root: &;
+
+  display: flex;
+  align-items: flex-start;
+
+  color: var(--gray);
+
+  gap: 10px;
+
+  @include hover {
+    #{$root}__icon {
+      color: #6d6e71;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    margin-top: 4px;
+
+    transition: color 300ms;
+
+    color: var(--blue);
+  }
+
+  &__info {
+    display: grid;
+
+    @include font(14px, 20px, 400);
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+  }
+}

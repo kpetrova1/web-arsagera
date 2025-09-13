@@ -1,0 +1,153 @@
+@use "../general/mixins" as *;
+
+.block {
+  $root: &;
+
+  display: grid;
+
+  @for $i from 1 through 12 {
+    &_#{$i * 4} {
+      gap: #{$i * 4} + "px";
+    }
+  }
+
+  &_contents-down-md {
+    @include down(md) {
+      display: contents;
+    }
+  }
+
+  &_contents-down-lg {
+    @include down(lg) {
+      display: contents;
+    }
+  }
+
+  &_align-start {
+    justify-items: start;
+  }
+
+  &_column-2 {
+    @include up(xl) {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+  }
+
+  &_column-auto {
+    @include up(xl) {
+      grid-auto-columns: auto;
+      grid-auto-flow: column;
+      justify-content: initial;
+    }
+  }
+
+  &__self-end {
+    justify-self: end;
+  }
+
+  &__title {
+    @include font(18px, 26px, 500);
+
+    &:has(svg) {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+    }
+
+    &:has(span:nth-of-type(2)) {
+      @include down(xl) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title-icon {
+    flex-shrink: 0;
+  }
+
+  &__title-small {
+    @include font(16px, 26px, 500);
+  }
+
+  &__title-underline {
+    @include font(16px, 20px, 500);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid currentColor;
+  }
+
+  &__content {
+    > * + * {
+      margin-top: 16px;
+    }
+  }
+
+  &__image-right {
+    @include up(lg) {
+      margin-left: 24px;
+      float: right;
+    }
+  }
+
+  &__image-left {
+    @include up(lg) {
+      margin-right: 24px;
+      float: left;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 18px;
+
+    @include up(md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100vw - 20px);
+
+    gap: 16px;
+
+    @include up(md) {
+      justify-content: space-between;
+
+      gap: 18px;
+    }
+  }
+
+  &__actions-social {
+    @include down(md) {
+      position: absolute;
+      top: 56px;
+      right: 0;
+    }
+  }
+
+  &__actions-share {
+    display: flex;
+
+    gap: 14px;
+  }
+}

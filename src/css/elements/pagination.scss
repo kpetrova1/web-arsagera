@@ -1,0 +1,135 @@
+@use "../general/mixins" as *;
+
+.pagination {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+
+  gap: 8px;
+
+  @include up(sm) {
+    gap: 12px;
+  }
+
+  @include up(xl) {
+    margin-top: 20px;
+
+    gap: 8px;
+  }
+
+  &_left {
+    justify-content: start;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    transition:
+      color 0.2s linear,
+      border-color 0.2s linear;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+    font-size: 0;
+
+    @include up(sm) {
+      min-width: 36px;
+      height: 36px;
+    }
+
+    @include up(xl) {
+      width: auto;
+
+      font-size: 14px;
+      line-height: 1.17;
+
+      gap: 4px;
+    }
+
+    @include hover {
+      border-color: var(--orange);
+
+      color: var(--orange);
+    }
+
+    &_disabled {
+      color: var(--gray-medium2);
+
+      pointer-events: none;
+    }
+
+    &_in-between {
+      min-width: 30px;
+      height: 24px;
+      padding: 0 5px;
+
+      border: 1px solid var(--gray-main);
+      border-radius: 4px;
+
+      font-size: 14px;
+
+      @include up(sm) {
+        min-width: 40px;
+        height: 34px;
+      }
+
+      @include up(xl) {
+        min-width: 40px;
+        height: 20px;
+
+        font-size: 16px;
+      }
+    }
+
+    &_active {
+      border-color: var(--orange);
+
+      color: var(--orange);
+    }
+
+    &_circle {
+      width: 38px;
+      height: 38px;
+
+      border: 1px solid currentColor;
+
+      border-radius: 50%;
+    }
+  }
+
+  &__left-arrow {
+    margin-left: -3px;
+  }
+
+  &__right-arrow {
+    margin-left: 3px;
+  }
+
+  &__mobile-arrow {
+    @include up(sm) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include up(xl) {
+      display: none;
+    }
+  }
+
+  &__desktop-arrow {
+    display: none;
+
+    @include up(xl) {
+      display: block;
+    }
+  }
+}

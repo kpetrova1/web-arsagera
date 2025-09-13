@@ -1,0 +1,18 @@
+@use "../general/mixins" as *;
+
+.stat {
+  @include font(16px, 16px, 400);
+  display: flex;
+  align-items: center;
+
+  color: var(--gray-medium2);
+
+  gap: 16px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+  }
+}

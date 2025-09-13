@@ -1,0 +1,23 @@
+@use "../general/mixins" as *;
+
+.message {
+  display: grid;
+
+  gap: 8px;
+
+  &__title {
+    @include font(16px, 26px, 500);
+  }
+
+  &__text {
+    @include font(16px, 26px, 400);
+  }
+
+  &__link {
+    justify-self: end;
+  }
+
+  :is(ul) & ul {
+    list-style-type: disc;
+  }
+}

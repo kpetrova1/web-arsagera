@@ -1,0 +1,54 @@
+@use "../general/mixins" as *;
+
+.option {
+  $root: &;
+  display: flex;
+
+  cursor: pointer;
+
+  gap: 12px;
+
+  .is-voted & {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  &:has(&__input:disabled) {
+    color: var(--gray-tech);
+  }
+
+  &__input {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+
+    .is-voted & {
+      display: none;
+    }
+  }
+
+  &__result {
+    @include font(16px, 20px, 400);
+    display: none;
+    position: relative;
+
+    .is-voted & {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    height: 20px;
+
+    border-radius: 4px;
+
+    background-color: var(--gray-medium);
+  }
+}

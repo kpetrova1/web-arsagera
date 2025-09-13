@@ -1,0 +1,153 @@
+@use "../general/mixins" as *;
+
+.action-dropdown {
+  position: relative;
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    min-width: 50px;
+    height: 40px;
+    padding: 0;
+
+    transition: color 300ms;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--gray-bg);
+
+    gap: 8px;
+
+    @include hover {
+      color: var(--orange);
+    }
+
+    @include up(md) {
+      min-width: auto;
+      height: auto;
+
+      border-radius: 0;
+
+      background-color: transparent;
+
+      color: var(--blue);
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    [aria-expanded="true"] & {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__menu {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 37px 42px;
+
+    border-radius: 4px;
+
+    background-color: var(--white);
+    box-shadow: 0 0 20px 0 #00000026;
+
+    @include up(md) {
+      position: absolute;
+      top: 35px;
+      right: auto;
+      bottom: auto;
+      width: max-content;
+      padding: 12px 18px;
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 4px;
+  }
+
+  &__item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--gray-light);
+
+    @include up(md) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      border-bottom: none;
+    }
+  }
+
+  &__control {
+    @include font(16px, 19px, 400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    @include hover {
+      color: var(--blue);
+    }
+
+    &:has(input:checked) {
+      color: var(--blue);
+    }
+
+    span {
+      color: currentColor;
+    }
+  }
+
+  &__input {
+    width: 35px;
+    height: 35px;
+
+    @include up(md) {
+      visibility: hidden;
+      position: absolute;
+
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    @include font(18px, 22px, 600);
+    margin-bottom: 38px;
+
+    color: var(--gray-dark);
+
+    @include up(md) {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 26px;
+
+    gap: 32px;
+
+    @include up(md) {
+      display: none;
+    }
+  }
+}

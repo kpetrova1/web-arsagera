@@ -1,0 +1,37 @@
+@use "../../general/mixins" as *;
+
+.modal-callback {
+  width: 670px;
+  max-width: 100%;
+  padding: 78px 16px 40px;
+
+  @include up(sm) {
+    padding: 78px 28px 40px;
+  }
+
+  &__form {
+    display: grid;
+
+    gap: 30px;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &__footer {
+    display: grid;
+
+    gap: 10px;
+  }
+
+  &__feedback {
+    display: grid;
+
+    gap: 10px;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+}

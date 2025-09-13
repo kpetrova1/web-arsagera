@@ -1,0 +1,28 @@
+@use "../general/mixins" as *;
+
+.reviews {
+  display: grid;
+
+  gap: 24px;
+
+  &__item-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    gap: 8px;
+  }
+
+  &__item-author-image {
+    width: 63px;
+    height: 63px;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__item-author-name {
+    @include font(16px, 26px, 500);
+    color: var(--gray-dark);
+  }
+}

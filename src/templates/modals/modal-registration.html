@@ -1,0 +1,68 @@
+<div class="modal is-hidden" id="modal-registration" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-registration"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-registration">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-registration">
+      <h2 class="modal-registration__title">Регистрация на сайте</h2>
+
+      <form class="modal-registration__form" data-modal-form>
+        <label class="field">
+          <span class="field__label">Логин (только латинские буквы и цифры, без пробелов)*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Пароль*</span>
+          <input class="field__input" type="password" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Подтверждение пароля*</span>
+          <input class="field__input" type="password" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта или логин</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Имя*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Фамилия</span>
+          <input class="field__input" type="text" />
+        </label>
+        <div class="modal-registration__code">
+          <label class="field">
+            <span class="field__label">Защитный код</span>
+            <input class="field__input" type="text" required />
+          </label>
+          <div class="modal-registration__captcha">captcha</div>
+        </div>
+        <label class="option">
+          <input class="option__input" type="checkbox" required />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
+        </label>
+
+        <div class="modal-registration__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="button button_orange button_full-width button_large" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      <div class="modal-registration__feedback is-hidden">
+        <p>
+          В личном кабинете пользователя сайта <a class="link link_gray" href="#">arsagera.ru</a>. Вы можете принять
+          участие в <a class="link link_gray" href="#">акциях</a>, проводимых компанией, комментировать материалы,
+          публикуемые на сайте
+        </p>
+        <a class="button button_orange button_full-width" href="#">Перейти в Профиль</a>
+      </div>
+    </div>
+  </div>
+</div>

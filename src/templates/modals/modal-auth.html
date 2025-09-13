@@ -1,0 +1,44 @@
+<div class="modal is-hidden" id="modal-auth" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-auth"></div>
+
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-auth">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-auth">
+      <h2 class="modal-auth__title">Авторизация на сайте</h2>
+
+      <form class="modal-auth__form">
+        <label class="field">
+          <span class="field__label">Электронная почта или логин</span>
+          <input class="field__input" type="email" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Пароль</span>
+          <input class="field__input" type="password" required />
+        </label>
+
+        <div class="modal-auth__footer">
+          <button class="button button_orange button_full-width button_large" type="submit">Войти</button>
+          <button class="modal-auth__button link link_gray-dark" type="button" data-modal-button="modal-password">
+            Забыли пароль?
+          </button>
+        </div>
+
+        <p>Фактом входа Вы даете согласие на получение, хранение и обработку персональных данных.</p>
+
+        <button
+          class="button button_gray button_full-width button_large"
+          type="button"
+          data-modal-button="modal-registration"
+        >
+          Зарегистрироваться
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

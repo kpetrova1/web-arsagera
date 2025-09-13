@@ -1,0 +1,284 @@
+<!-- The comments section has an is-auth class to display the functionality of the authorised user -->
+<section class="comments" data-comments-section>
+  <h2 class="comments__title">Комментарии - 2</h2>
+  <!-- Main comment form start -->
+  <form action="#" class="comments__form">
+    <div class="comments__form-grid">
+      <div class="field">
+        <label class="visually-hidden" for="name-comment">Ваше имя* </label>
+        <input class="field__input" type="text" id="name-comment" placeholder="Ваше имя*" required />
+      </div>
+      <p class="comments__form-hint">
+        Для получения уведомления об ответе необходимо
+        <button class="link link_blue link_small" type="button" data-modal-button="modal-auth">авторизоваться</button>
+        или
+        <button class="link link_blue link_small" type="button" data-modal-button="modal-registration">
+          зарегистрироваться на сайте.
+        </button>
+      </p>
+    </div>
+    <div class="field">
+      <label class="visually-hidden" for="comment-textarea">Введите текст комментария</label>
+      <textarea
+        name=""
+        rows="1"
+        class="comments__textarea field__input"
+        placeholder="Введите текст комментария"
+        data-comment-textarea
+        id="comment-textarea"
+      ></textarea>
+    </div>
+    <button class="comments__button button button_gray" type="submit">Отправить</button>
+  </form>
+  <!-- Main comment form end -->
+  <!-- Comments list start -->
+  <ul class="comments__list">
+    <!-- Comment item start -->
+    <li class="comments__item">
+      <!-- The comment block has an is-author class to display the functionality of the post's author -->
+      <div class="comment is-author" data-comment>
+        <!-- Comment author info start -->
+        <header class="comment__header">
+          <img src="/avatar2.png" alt="Сергей Крснощека" class="comment__author-img" />
+          <p class="comment__author-name">Сергей Краснощока</p>
+          <time class="comment__date" datetime="2023-10-02 19:00">2 октября 2023 в 19:00</time>
+        </header>
+        <!-- Comment author info end -->
+        <!-- Comment text start -->
+        <div class="comment__wysiwyg" data-comment-text>
+          <blockquote>Проценты к уплате за 2022 год не 2,8 млрд.руб., а 2,8 млн.руб.</blockquote>
+          <p>
+            <i><strong>Неизвестный исполнитель</strong></i
+            >, здравствуйте! Спасибо за обратную связь - исправили!
+          </p>
+        </div>
+        <!-- Comment text end -->
+        <!-- Comment controls start -->
+        <footer class="comment__footer">
+          <div class="comment__rating" data-rating-id="123">
+            <button class="comment__rating-button" disabled type="button" data-rating-up>
+              <svg class="comment__rating-icon comment__rating-icon_up" viewBox="0 0 15 11" width="15" height="11">
+                <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+              </svg>
+              <span data-like-count>250</span>
+            </button>
+            <button class="comment__rating-button" type="button" data-rating-down>
+              <svg class="comment__rating-icon comment__rating-icon_down" viewBox="0 0 15 11" width="15" height="11">
+                <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+              </svg>
+              <span data-dislike-count>250</span>
+            </button>
+          </div>
+          <div class="comment__controls">
+            <button class="link link_orange comment__control-edit" type="button" data-comment-edit>
+              Редактировать
+            </button>
+            <button class="link link_orange comment__control-delete" type="button" data-comment-delete>Удалить</button>
+            <button class="link link_gray comment__control-answer" type="button" data-comment-answer data-auth-tooltip>
+              Ответить
+            </button>
+          </div>
+        </footer>
+        <!-- Comment controls end -->
+      </div>
+      <!-- Comment answers start -->
+      <div class="comments__answers" data-accordion-container>
+        <button class="comments__answers-button" type="button" data-accordion-button>
+          <svg class="comments__collapse-icon" viewBox="0 0 32 11" width="32" height="11">
+            <use href="/sprite.svg#collapse-arrow-icon" x="0" y="0"></use>
+          </svg>
+          3 ответа
+        </button>
+        <!-- Comments answers list start -->
+        <ul class="comments__answers-list" data-accordion-content>
+          <!-- Comment answer item start -->
+          <li class="comments__answers-item">
+            <!-- The comment block has an is-author class to display the functionality of the post's author -->
+            <div class="comment" data-comment>
+              <header class="comment__header">
+                <img src="/avatar2.png" alt="Имя Фамилия" class="comment__author-img" />
+                <p class="comment__author-name">Имя Фамилия</p>
+                <time class="comment__date" datetime="2023-10-02 19:00">2 октября 2023 в 19:00</time>
+              </header>
+              <div class="comment__wysiwyg" data-comment-text>
+                <blockquote>
+                  Проценты к уплате за 2022 год не 2,8 млрд.руб., а 2,8 млн.руб. Еще какой-то текст, например, много
+                  слов благодарности за нашу работу
+                </blockquote>
+                <p>
+                  <i><strong>Неизвестный исполнитель</strong></i
+                  >, здравствуйте! Спасибо за обратную связь - исправили!
+                </p>
+              </div>
+              <footer class="comment__footer">
+                <div class="comment__rating" data-rating-id="123">
+                  <button class="comment__rating-button" type="button" data-rating-up>
+                    <svg
+                      class="comment__rating-icon comment__rating-icon_up"
+                      viewBox="0 0 15 11"
+                      width="15"
+                      height="11"
+                    >
+                      <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                    <span data-like-count>250</span>
+                  </button>
+                  <button class="comment__rating-button" type="button" data-rating-down>
+                    <svg
+                      class="comment__rating-icon comment__rating-icon_down"
+                      viewBox="0 0 15 11"
+                      width="15"
+                      height="11"
+                    >
+                      <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                    <span data-dislike-count>250</span>
+                  </button>
+                </div>
+                <div class="comment__controls">
+                  <button class="link link_orange comment__control-edit" type="button" data-comment-edit>
+                    Редактировать
+                  </button>
+                  <button class="link link_orange comment__control-delete" type="button" data-comment-delete>
+                    Удалить
+                  </button>
+                  <button
+                    class="link link_gray comment__control-answer"
+                    type="button"
+                    data-comment-answer
+                    data-auth-tooltip
+                  >
+                    Ответить
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </li>
+          <!-- Comment answer item end -->
+          <!-- Comment answer item start -->
+          <li class="comments__answers-item">
+            <div class="comment" data-comment>
+              <header class="comment__header">
+                <img src="/avatar2.png" alt="Фамилия Имя" class="comment__author-img" />
+                <p class="comment__author-name">Фамилия Имя</p>
+                <time class="comment__date" datetime="2023-10-02 19:00">2 октября 2023 в 19:00</time>
+              </header>
+              <div class="comment__wysiwyg" data-comment-text>
+                <p>
+                  <i><strong>Неизвестный исполнитель</strong></i
+                  >, здравствуйте! Спасибо за обратную связь - исправили!
+                </p>
+              </div>
+              <footer class="comment__footer">
+                <div class="comment__rating" data-rating-id="123">
+                  <button class="comment__rating-button" type="button" data-rating-up>
+                    <svg
+                      class="comment__rating-icon comment__rating-icon_up"
+                      viewBox="0 0 15 11"
+                      width="15"
+                      height="11"
+                    >
+                      <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                    <span data-like-count>250</span>
+                  </button>
+                  <button class="comment__rating-button" type="button" data-rating-down>
+                    <svg
+                      class="comment__rating-icon comment__rating-icon_down"
+                      viewBox="0 0 15 11"
+                      width="15"
+                      height="11"
+                    >
+                      <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                    <span data-dislike-count>250</span>
+                  </button>
+                </div>
+                <div class="comment__controls">
+                  <button class="link link_orange comment__control-edit" type="button" data-comment-edit>
+                    Редактировать
+                  </button>
+                  <button class="link link_orange comment__control-delete" type="button" data-comment-delete>
+                    Удалить
+                  </button>
+                  <button
+                    class="link link_gray comment__control-answer"
+                    type="button"
+                    data-comment-answer
+                    data-auth-tooltip
+                  >
+                    Ответить
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </li>
+          <!-- Comment answer item end -->
+        </ul>
+        <!-- Comments answers list end -->
+      </div>
+      <!-- Comment answers end -->
+    </li>
+    <!-- Comment item end -->
+    <!-- Comment item start -->
+    <li class="comments__item">
+      <div class="comment" data-comment>
+        <header class="comment__header">
+          <!--                          <img src="/avatar2.png" alt="Имя Фамилия" class="comment__author-img" />-->
+          <p class="comment__author-name">Имя Фамилия</p>
+          <time class="comment__date" datetime="2023-10-02 19:00">2 октября 2023 в 19:00</time>
+        </header>
+        <div class="comment__wysiwyg" data-comment-text>
+          <blockquote>Проценты к уплате за 2022 год не 2,8 млрд.руб., а 2,8 млн.руб.</blockquote>
+          <p>
+            <i><strong>Неизвестный исполнитель</strong></i
+            >, здравствуйте! Спасибо за обратную связь - исправили!
+          </p>
+        </div>
+        <footer class="comment__footer">
+          <div class="comment__rating" data-rating-id="123">
+            <button class="comment__rating-button" type="button" data-rating-up>
+              <svg class="comment__rating-icon comment__rating-icon_up" viewBox="0 0 15 11" width="15" height="11">
+                <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+              </svg>
+              <span data-like-count>250</span>
+            </button>
+            <button class="comment__rating-button" type="button" data-rating-down>
+              <svg class="comment__rating-icon comment__rating-icon_down" viewBox="0 0 15 11" width="15" height="11">
+                <use href="/sprite.svg#rating-arrow-icon" x="0" y="0"></use>
+              </svg>
+              <span data-dislike-count>250</span>
+            </button>
+          </div>
+          <div class="comment__controls">
+            <button class="link link_orange comment__control-edit" type="button" data-comment-edit>
+              Редактировать
+            </button>
+            <button class="link link_orange comment__control-delete" type="button" data-comment-delete>Удалить</button>
+            <button class="link link_gray comment__control-answer" type="button" data-comment-answer data-auth-tooltip>
+              Ответить
+            </button>
+          </div>
+        </footer>
+      </div>
+    </li>
+    <!-- Comment item end -->
+  </ul>
+  <!-- Comments list start -->
+</section>
+<!-- Form comment template start -->
+<template data-comment-template>
+  <form action="#" class="comments__form">
+    <label class="field">
+      <textarea
+        name=""
+        rows="1"
+        class="field__input"
+        placeholder="Введите текст комментария"
+        data-comment-textarea
+      ></textarea>
+    </label>
+    <button class="button button_orange" type="submit">Опубликовать</button>
+  </form>
+</template>
+<!-- Form comment template end -->

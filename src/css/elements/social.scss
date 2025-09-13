@@ -1,0 +1,48 @@
+@use "../general/mixins" as *;
+
+.social {
+  --social-list-gap: 16px;
+  --social-icon-color: var(--gray-main);
+  --social-icon-hover-color: var(--orange);
+  --social-icon-height: 36px;
+  --social-icon-width: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: var(--social-list-gap);
+
+  &_small {
+    --social-icon-height: 30px;
+    --social-icon-width: 30px;
+    --social-list-gap: 8px;
+  }
+
+  &_large {
+    --social-icon-height: 40px;
+    --social-icon-width: 40px;
+    --social-list-gap: 12px;
+  }
+
+  &__link {
+    display: flex;
+
+    color: var(--social-icon-color);
+
+    @include hover {
+      color: var(--social-icon-hover-color);
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: var(--social-icon-width);
+    height: var(--social-icon-height);
+
+    transition: 0.2s color linear;
+  }
+}

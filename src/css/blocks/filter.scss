@@ -1,0 +1,121 @@
+@use "../general/mixins" as *;
+
+.filter {
+  &__header,
+  &__footer {
+    display: none;
+  }
+
+  &__body {
+    display: grid;
+
+    gap: 24px;
+  }
+
+  &__title {
+    @include font(16px, 26px, 500);
+    margin-bottom: 8px;
+
+    color: var(--gray-dark);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 16px;
+
+    @include up(md) {
+      gap: 8px;
+    }
+
+    @include up(lg) {
+      padding-right: 18px;
+    }
+
+    @include up(xl) {
+      padding-right: 50px;
+    }
+  }
+
+  &__social {
+    display: none;
+
+    gap: 8px;
+
+    @include up(lg) {
+      display: grid;
+    }
+  }
+
+  @include down(md) {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+
+    background-color: #00000026;
+
+    inset: 0;
+
+    &.is-hidden {
+      display: none;
+    }
+
+    &__backdrop {
+      position: absolute;
+
+      inset: 0;
+    }
+
+    &__header {
+      display: block;
+      margin-bottom: 36px;
+
+      text-align: center;
+    }
+
+    &__main-title {
+      @include font(18px, 22px, 600);
+
+      color: var(--gray-dark);
+    }
+
+    &__close {
+      position: absolute;
+      top: 32px;
+      right: 10px;
+      padding: 0;
+
+      border: none;
+
+      background-color: transparent;
+
+      color: var(--gray-main);
+    }
+
+    &__content {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      max-height: calc(100% - 160px);
+      margin: auto;
+      padding: 32px 10px;
+
+      background-color: var(--white);
+    }
+
+    &__body {
+      flex-grow: 1;
+      overflow: auto;
+    }
+
+    &__footer {
+      display: block;
+      padding-top: 16px;
+    }
+  }
+}

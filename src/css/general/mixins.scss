@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "sass:math";
+
+$breakpoints: (
+  xs: 375px,
+  sm: 480px,
+  md: 768px,
+  lg: 1000px,
+  xl: 1280px,
+  xxl: 1440px,
+);
+
+@mixin up($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin down($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @media (max-width: $value - 1px) {
+    @content;
+  }
+}
+
+@mixin font($font-size, $line-height: null, $weight: null) {
+  font-size: $font-size;
+
+  @if $line-height {
+    @if math.unit($line-height) == "px" {
+      line-height: math.div($line-height, $font-size);
+    } @else {
+      line-height: $line-height;
+    }
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+
+@mixin hover {
+  @media not all and (hover: none) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin font-import($name, $file, $weight) {
+  @font-face {
+    font-family: $name;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("/src/fonts/" + $file + ".woff2") format("woff2");
+
+    font-display: swap;
+  }
+}

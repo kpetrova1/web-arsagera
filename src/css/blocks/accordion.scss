@@ -1,0 +1,140 @@
+@use "../general/mixins" as *;
+
+.accordion {
+  $root: &;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  background-color: var(--white);
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+
+  scroll-margin: 74px;
+
+  &_bordered:not(.is-active) {
+    border-right: 1px solid var(--gray-medium);
+    border-bottom: 2px solid var(--gray-medium);
+  }
+
+  &__header {
+    @include font(18px, 22px, 400);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 19px 20px 19px 12px;
+
+    transition: color 300ms;
+
+    cursor: pointer;
+
+    #{$root}.is-active & {
+      color: var(--orange);
+    }
+
+    &:has(#{$root}__action-tabs) {
+      @include up(xl) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__anchor {
+    position: absolute;
+
+    opacity: 0;
+
+    inset: 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    :has(#{$root}__tabs) & {
+      @include up(xl) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+
+    transition: transform 0.3s ease;
+
+    color: var(--gray-main);
+
+    #{$root}.is-active & {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__tabs {
+    display: none;
+    position: relative;
+    margin-right: auto;
+    margin-left: 26px;
+    overflow: hidden;
+
+    @include up(xl) {
+      display: flex;
+    }
+
+    #{$root}.is-active & {
+      display: none;
+    }
+  }
+
+  &__tabs-inner {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+
+    gap: 16px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__tab {
+    @include font(16px, 19px, 400);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    transition: color 300ms;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-medium2);
+
+    gap: 4px;
+    scroll-snap-align: start;
+
+    @include hover {
+      color: var(--blue);
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 10px;
+
+    #{$root}.is-active & {
+      display: block;
+    }
+  }
+}

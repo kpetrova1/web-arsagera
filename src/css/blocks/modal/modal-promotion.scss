@@ -1,0 +1,17 @@
+@use "../../general/mixins" as *;
+
+.modal-promotion {
+  display: grid;
+  width: 460px;
+  max-width: 100%;
+  padding: 26px;
+
+  gap: 30px;
+
+  &__title {
+    @include font(18px, 22px, 600);
+    margin-bottom: 20px;
+
+    color: var(--orange);
+  }
+}

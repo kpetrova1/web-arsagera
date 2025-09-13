@@ -1,0 +1,8 @@
+@use "./default/default";
+
+// Page styles
+@use "./layout/page";
+@use "./blocks/breadcrumbs";
+@use "./blocks/tabs";
+@use "./blocks/accordion";
+@use "./blocks/modal/modal-question";

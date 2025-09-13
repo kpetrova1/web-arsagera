@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/src/site.webmanifest" />
+    <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
+  </head>
+  <body>
+    <!-- Top-bar block start -->
+    <load src="src/templates/top-bar.html" />
+    <!-- Top-bar block end -->
+
+    <!-- Header block start -->
+    <load src="src/templates/header.html" />
+    <!-- Header block end -->
+
+    <!-- Main block start -->
+    <main class="main">
+      <!-- Page container start -->
+      <div class="custom-page container">
+        <div class="custom-page__grid">
+          <!-- Aside start -->
+          <aside class="custom-page__aside">
+            <div class="nav-side">
+              <button class="nav-side__button" type="button" data-nav-side-button>
+                <svg class="nav-side__icon-open" viewBox="0 0 23 18" width="23" height="18">
+                  <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
+                </svg>
+                <svg class="nav-side__icon-close" viewBox="0 0 20 20" width="20" height="20">
+                  <use href="/sprite.svg#cross-icon-3" x="0" y="0"></use>
+                </svg>
+                Меню
+              </button>
+              <ul class="nav-side__list" data-nav-side>
+                <li>
+                  <a class="nav-side__link is-active" href="#">Настройки</a>
+                </li>
+                <li>
+                  <a class="nav-side__link" href="#">Индивидуальное доверительное управление</a>
+                </li>
+                <li>
+                  <a class="nav-side__link" href="#">Участие в акциях</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- Aside end -->
+
+          <!-- Content start -->
+          <div class="custom-page__content">
+            <!-- Block start -->
+            <section class="block block_40">
+              <div class="block block_16">
+                <h1 class="block__title text-gray-dark">Здравствуйте, Анастасия Александровна!</h1>
+                <p class="text-gray-tech">Дата последнего визита: 17 декабря 2024 года, в 18:32</p>
+              </div>
+
+              <div class="block block_16">
+                <p>
+                  Вы находитесь в личном кабинете пользователя сайта <a class="link link_blue" href="#">arsagera.ru</a>.
+                  Вы можете принять участие в акциях, проводимых компанией, комментировать материалы, публикуемые на
+                  сайте.
+                </p>
+                <p>
+                  Отражение данных по портфелю клиента в данном разделе больше не поддерживается! Если Вы являетесь
+                  клиентом компании, то отслеживать информацию о состоянии лицевых счетов, результатах инвестирования, а
+                  также осуществлять операции с принадлежащими паями Вы можете ТОЛЬКО в
+                  <a class="link link_blue" href="#">Личном кабинете пайщика</a>.
+                </p>
+              </div>
+
+              <form class="account-form">
+                <div class="account-form__fields">
+                  <div class="field">
+                    <label class="field__label" for="name">Имя*</label>
+                    <input class="field__input" type="text" id="name" required value="Анастасия Александровна" />
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="lastName">Фамилия</label>
+                    <input class="field__input" type="text" id="lastName" value="Таганова" />
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="email">Электронная почта*</label>
+                    <input class="field__input" type="email" id="email" required value="nastaki@yandex.ru" />
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="password">Установите новый пароль</label>
+                    <input
+                      class="field__input"
+                      type="password"
+                      id="password"
+                      placeholder="****************************"
+                    />
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="passwordConfirm">Подтвердите новый пароль</label>
+                    <input
+                      class="field__input"
+                      type="password"
+                      id="passwordConfirm"
+                      placeholder="****************************"
+                    />
+                  </div>
+                  <p class="field-hint">* поля, обязательные к заполнению</p>
+                  <div class="account-form__submit">
+                    <button class="button button_gray-solid" type="submit">Сохранить изменения</button>
+                    <p>Изменения успешно сохранены.</p>
+                  </div>
+                </div>
+                <div class="account-form__profile">
+                  <div class="account-form__profile-picture">
+                    <img class="account-form__profile-image" id="avatar" src="/avatar.jpg" alt="Profile" />
+                    <div class="account-form__profile-overlay">
+                      <svg viewBox="0 0 82 62" width="82" height="62" aria-hidden="true">
+                        <use href="/sprite.svg#camera-icon" x="0" y="0"></use>
+                      </svg>
+                    </div>
+                    <input type="file" id="file-input" accept="image/*" class="visually-hidden" />
+                  </div>
+
+                  <div>
+                    <p class="account-form__profile-login">Nastaki</p>
+                    <p class="account-form__profile-hint">Логин используется для авторизации на сайте</p>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- Block end -->
+          </div>
+          <!-- Content end -->
+        </div>
+      </div>
+      <!-- Page container end -->
+    </main>
+    <!-- Main block end -->
+
+    <!-- Footer block start -->
+    <load src="src/templates/footer.html" />
+    <!-- Footer block end -->
+
+    <!-- Modal contacts start -->
+    <load src="src/templates/modals.html" />
+    <!-- Modal contacts end -->
+
+    <script type="module" src="/src/js/default.js"></script>
+    <script type="module" src="/src/js/account-settings.js"></script>
+  </body>
+</html>

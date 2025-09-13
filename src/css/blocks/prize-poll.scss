@@ -1,0 +1,84 @@
+@use "../general/mixins" as *;
+
+.prize-poll {
+  --border-color: var(--orange);
+  --hint-color: var(--gray-main);
+  --title-color: var(--gray-dark);
+  --item-title-weight: 500;
+  --filter: none;
+
+  max-width: 100%;
+  overflow: hidden;
+
+  &_disabled {
+    --border-color: #d9d9d9;
+    --hint-color: var(--gray-medium);
+    --title-color: var(--gray-main);
+    --filter: grayscale(1);
+    --item-title-weight: 400;
+  }
+
+  &__header {
+    position: relative;
+    padding-bottom: 16px;
+    padding-left: 124px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 12px;
+
+    filter: var(--filter);
+  }
+
+  &__body {
+    display: grid;
+    padding: 12px 24px 32px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+
+    gap: 32px;
+  }
+
+  &__title {
+    @include font(18px, 24px, 500);
+  }
+
+  &__hint {
+    padding-left: 100px;
+
+    color: var(--hint-color);
+  }
+
+  &__form {
+    display: grid;
+
+    gap: 42px;
+  }
+
+  &__question-title {
+    @include font(16px, 24px, var(--item-title-weight));
+    margin-bottom: 24px;
+
+    color: var(--title-color);
+  }
+
+  &__options {
+    display: grid;
+
+    gap: 20px;
+  }
+
+  &__button {
+    display: block;
+    width: 284px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .table__head .table__row .table__cell {
+    color: var(--gray-tech);
+  }
+}

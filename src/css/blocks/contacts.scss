@@ -1,0 +1,76 @@
+@use "../general/mixins" as *;
+
+.contacts {
+  @include down(md) {
+    display: grid;
+  }
+
+  &__text-first {
+    order: -1;
+  }
+
+  &__video {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    float: right;
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    @include up(md) {
+      width: 320px;
+      margin-bottom: 0;
+      margin-left: 16px;
+    }
+
+    @include up(xl) {
+      width: 410px;
+    }
+  }
+
+  &__map {
+    display: flex;
+    order: 2;
+    width: 100%;
+    float: right;
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    @include up(md) {
+      width: 400px;
+      margin-left: 16px;
+    }
+
+    @include up(xl) {
+      width: 520px;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+  }
+
+  &__iframe {
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}

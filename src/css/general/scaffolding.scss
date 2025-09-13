@@ -1,0 +1,120 @@
+@use "mixins" as *;
+
+@include font-import("Inter", InterRegular, 400);
+@include font-import("Inter", InterMedium, 500);
+@include font-import("Inter", InterSemiBold, 600);
+@include font-import("Inter", InterBold, 700);
+
+html {
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include font(16px, 26px, 400);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  color: var(--gray-main);
+
+  font-family: "Inter", "Arial", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+svg {
+  pointer-events: none;
+}
+
+[hidden] {
+  display: none !important; // stylelint-disable-line
+}
+
+table {
+  max-width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+time {
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  border: 0;
+}
+
+.body-locked {
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  flex: 1 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  @include up(lg) {
+    padding-top: 40px;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}

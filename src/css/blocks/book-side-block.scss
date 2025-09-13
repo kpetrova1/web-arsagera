@@ -1,0 +1,71 @@
+@use "../general/mixins" as *;
+
+.book-side-block {
+  display: grid;
+  grid-template-columns: 146px 1fr;
+  align-items: start;
+
+  gap: 16px;
+
+  @include up(sm) {
+    grid-template-columns: 190px 1fr;
+  }
+
+  @include up(md) {
+    grid-template-columns: 1fr;
+  }
+
+  @include up(lg) {
+    grid-template-columns: 146px 1fr;
+
+    gap: 10px;
+  }
+
+  @include up(xl) {
+    grid-template-columns: 190px 1fr;
+    align-items: start;
+
+    gap: 16px;
+  }
+
+  &__media {
+    display: grid;
+
+    gap: 12px;
+
+    @include up(md) {
+      display: contents;
+    }
+
+    @include up(lg) {
+      display: grid;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    aspect-ratio: 0.7/1;
+  }
+
+  &__stores {
+    display: grid;
+    order: 3;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 12px;
+  }
+
+  &__links {
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 20px;
+  }
+}

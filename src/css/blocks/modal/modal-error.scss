@@ -1,0 +1,10 @@
+@use "../../general/mixins" as *;
+
+.modal-error {
+  display: grid;
+  width: 460px;
+  max-width: 100%;
+  padding: 48px 22px;
+
+  gap: 16px;
+}

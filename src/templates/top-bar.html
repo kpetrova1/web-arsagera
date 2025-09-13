@@ -1,0 +1,94 @@
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar__wrapper">
+      <!-- Логотип -->
+      <a class="top-bar__logo" href="/" aria-label="Перейти на главную страницу">
+        <img class="top-bar__logo-image" src="/logo.svg" alt="Логотип Арсагера" />
+      </a>
+
+      <!-- Информационный блок -->
+      <div class="top-bar__info">
+        <div class="top-bar__index">
+          <a class="top-bar__index-link link link_gray" href="#">Индекс Арсагеры</a>
+          <span class="top-bar__index-value">
+            <span class="top-bar__index-change">0,62%</span>
+            | <span class="top-bar__index-points">+0,37 п.п.</span>
+          </span>
+          <span class="top-bar__index-date">на <time datetime="2024-09-12">12.09.2024</time></span>
+        </div>
+
+        <div class="top-bar__contacts">
+          <button class="top-bar__callback link link_gray" type="button" data-modal-button="modal-callback">
+            Перезвонить Вам?
+          </button>
+          <a class="top-bar__phone link link_gray link_size-large" href="tel:88123130530">
+            8 812 <span class="top-bar__phone-highlight">313 05 30</span>
+          </a>
+          <button class="top-bar__contact link link_gray" type="button" data-modal-button="modal-contacts">
+            Связь с нами
+          </button>
+        </div>
+      </div>
+
+      <!-- Действия -->
+      <div class="top-bar__actions">
+        <a class="top-bar__action button button_blue button_full-width" href="#">
+          <svg class="top-bar__action-mobile-show" viewBox="0 0 34 27" width="34" height="27" aria-hidden="true">
+            <use href="/sprite.svg#suitcase-icon"></use>
+          </svg>
+          <span class="top-bar__action-mobile-hide">Стать клиентом</span>
+        </a>
+
+        <!-- удалить класс is-auth и добавить is-logout если пользователь разлогинился -->
+        <div class="top-bar__auth is-auth">
+          <button
+            class="top-bar__auth-toggle button button_orange button_full-width"
+            type="button"
+            aria-expanded="false"
+            aria-controls="auth-dropdown"
+            data-auth-toggle
+          >
+            <span class="is-logout">Войти</span>
+            <span class="top-bar__auth-name is-auth">Анастасия</span>
+            <svg class="top-bar__auth-arrow" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+              <use href="/sprite.svg#arrow-down-icon"></use>
+            </svg>
+          </button>
+
+          <ul class="top-bar__auth-dropdown" id="auth-dropdown" aria-hidden="true" role="menu">
+            <li class="top-bar__auth-item is-logout" role="none">
+              <button class="top-bar__auth-option" type="button" role="menuitem" data-modal-button="modal-auth">
+                На сайт
+              </button>
+            </li>
+            <li class="top-bar__auth-item is-logout" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">В Личный кабинет</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">Настройки</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">ДУ</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">Участие в акциях</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <button class="top-bar__auth-option" type="button" role="menuitem" data-modal-button="modal-auth">
+                Выход
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <a class="top-bar__info-link link link_orange" href="#">
+          Мы не работаем<br />
+          с Клиентом, если...
+        </a>
+      </div>
+
+      <!-- Слоган -->
+      <img class="top-bar__slogan" src="/slogan.svg" alt="Забота о будущем с 2004 года" width="200" height="40" />
+    </div>
+  </div>
+</div>

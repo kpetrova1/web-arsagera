@@ -1,0 +1,108 @@
+@use "../general/mixins" as *;
+
+.button {
+  @include font(16px, 19px, 500);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 8px;
+
+  transition:
+    color 300ms,
+    box-shadow 300ms,
+    background-color 300ms;
+
+  border: none;
+
+  border-radius: 4px;
+
+  text-align: center;
+
+  gap: 8px;
+
+  @include up(sm) {
+    padding: 12px;
+  }
+
+  @include up(lg) {
+    padding: 8px 10px;
+  }
+
+  > * {
+    pointer-events: none;
+  }
+
+  &:has(svg) {
+    justify-content: space-between;
+
+    text-align: left;
+  }
+
+  &_full-width {
+    width: 100%;
+  }
+
+  &_large {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &_308 {
+    min-width: 100%;
+
+    @include up(sm) {
+      min-width: 308px;
+    }
+  }
+
+  &_gray {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px var(--gray-main);
+
+    color: var(--gray-main);
+
+    @include hover {
+      background-color: var(--gray-main);
+
+      color: var(--white);
+    }
+  }
+
+  &_gray-solid {
+    background-color: var(--gray-main);
+
+    color: var(--white);
+
+    @include hover {
+      background-color: var(--orange-dark);
+    }
+  }
+
+  &_blue {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px var(--blue);
+
+    color: var(--blue);
+
+    @include hover {
+      background-color: var(--blue);
+
+      color: var(--white);
+    }
+  }
+
+  &_orange {
+    background-color: var(--orange);
+
+    color: var(--white);
+
+    @include hover {
+      background-color: var(--orange-dark);
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}

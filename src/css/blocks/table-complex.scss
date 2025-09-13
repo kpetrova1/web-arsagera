@@ -1,0 +1,88 @@
+@use "../general/mixins" as *;
+
+.table-complex {
+  $root: &;
+
+  --border-color: var(--gray-medium2);
+  --odd-color: var(--gray-bg);
+  --even-color: var(--white);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: auto;
+
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+
+  @include up(md) {
+    overflow: hidden;
+  }
+
+  &__fixed {
+    width: 494px;
+
+    #{$root}__cell {
+      &:last-child {
+        border-right: 2px solid var(--border-color);
+      }
+    }
+  }
+
+  &__scroll {
+    white-space: nowrap;
+
+    @include up(md) {
+      overflow-x: auto;
+    }
+  }
+
+  &__element {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__body {
+    #{$root}__row {
+      &:nth-child(odd) #{$root}__cell {
+        background-color: var(--odd-color);
+      }
+
+      &:nth-child(even) #{$root}__cell {
+        background-color: var(--even-color);
+      }
+    }
+
+    #{$root}__cell {
+      height: 60px;
+    }
+  }
+
+  &__cell {
+    @include font(16px, 24px, 400);
+    padding: 6px 2px;
+
+    text-align: center;
+
+    @include up(sm) {
+      padding: 6px 10px;
+    }
+
+    &_underline {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+
+        right: 10px;
+
+        bottom: 0;
+        left: 10px;
+        height: 2px;
+
+        background-color: var(--gray-medium2);
+      }
+    }
+  }
+}

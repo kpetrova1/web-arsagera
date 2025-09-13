@@ -1,0 +1,43 @@
+@use "../general/mixins" as *;
+
+.course {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  margin-bottom: 12px;
+
+  gap: 18px;
+
+  @include up(xs) {
+    grid-template-columns: 180px 1fr;
+  }
+
+  @include up(sm) {
+    grid-template-columns: 265px 1fr;
+  }
+
+  @include up(md) {
+    grid-template-columns: 300px 1fr;
+  }
+
+  @include up(lg) {
+    grid-template-columns: 360px 1fr;
+  }
+
+  &__media {
+    overflow-x: auto;
+  }
+
+  &__image {
+    max-width: none;
+  }
+
+  &__links {
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 20px;
+  }
+}

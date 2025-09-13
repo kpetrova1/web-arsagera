@@ -1,0 +1,297 @@
+@use "../general/mixins" as *;
+
+.search-page {
+  $root: &;
+
+  padding: 20px 0 80px;
+
+  &__form {
+    @include up(lg) {
+      display: grid;
+      grid-template-areas:
+        "label field"
+        "label text";
+      grid-template-columns: max-content 658px;
+
+      gap: 2px 14px;
+    }
+
+    @include up(xl) {
+      display: grid;
+      grid-template-columns: max-content 924px;
+
+      gap: 2px 22px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include up(lg) {
+      grid-area: field;
+    }
+  }
+
+  &__search-label {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+
+    @include up(md) {
+      font-size: 16px;
+    }
+
+    @include up(lg) {
+      grid-area: label;
+      margin-top: 9px;
+
+      font-size: 18px;
+    }
+  }
+
+  &__search-field {
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px 34px 9px 10px;
+
+    border: 1px solid var(--gray-main);
+    border-radius: 4px;
+
+    background-color: var(--white);
+
+    color: var(--gray-main);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1;
+
+    appearance: none;
+
+    &:focus {
+      border-color: var(--orange);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--gray-medium2);
+    }
+
+    @include up(md) {
+      margin-top: 14px;
+    }
+
+    @include up(lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+
+    transition: color 0.2s linear;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+
+    cursor: pointer;
+
+    @include hover {
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+
+  &__search-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__form-txt {
+    margin-top: 2px;
+
+    color: var(--gray-medium2);
+    font-size: 14px;
+    line-height: 1.28;
+
+    @include up(lg) {
+      grid-area: text;
+    }
+  }
+
+  &__result {
+    max-width: 658px;
+    margin-top: 36px;
+
+    @include up(lg) {
+      margin-left: 150px;
+    }
+
+    @include up(xl) {
+      max-width: 920px;
+      margin-left: 156px;
+    }
+
+    &--no-result #{$root}__result-wrap {
+      display: none;
+    }
+
+    &--no-result #{$root}__no-result {
+      display: block;
+    }
+  }
+
+  &__no-result {
+    display: none;
+  }
+
+  &__list {
+    display: grid;
+    margin: 0;
+    padding: 0 0 32px;
+
+    list-style: none;
+
+    gap: 28px;
+
+    @include up(md) {
+      gap: 36px;
+    }
+  }
+
+  &__item {
+    display: grid;
+
+    gap: 8px;
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 28px;
+
+    transition: color 0.2s linear;
+
+    color: var(--gray-main);
+
+    @include up(sm) {
+      line-height: 1.43;
+    }
+
+    @include up(lg) {
+      padding-left: 0;
+
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    @include hover {
+      &:hover {
+        color: var(--orange);
+
+        &::before {
+          left: 5px;
+
+          @include up(lg) {
+            left: -32px;
+          }
+        }
+
+        &::after {
+          left: 10px;
+
+          @include up(lg) {
+            left: -27px;
+          }
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+
+      transform: rotate(45deg);
+      transition: left 0.2s linear;
+
+      border-top: 1px solid var(--orange);
+      border-right: 1px solid var(--orange);
+
+      @include up(lg) {
+        left: -37px;
+      }
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+
+      transform: rotate(45deg);
+      transition: left 0.2s linear;
+
+      border-top: 1px solid var(--orange);
+      border-right: 1px solid var(--orange);
+
+      @include up(lg) {
+        left: -32px;
+      }
+    }
+  }
+
+  &__item-txt {
+    color: var(--gray-medium2);
+    line-height: 1.28;
+
+    overflow-wrap: anywhere;
+
+    @include up(sm) {
+      line-height: 1.43;
+    }
+
+    @include up(md) {
+      line-height: 1.57;
+    }
+
+    @include up(lg) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    & mark {
+      background-color: transparent;
+
+      color: var(--gray-main);
+    }
+  }
+
+  &__no-result {
+    padding-top: 12px;
+  }
+
+  &__txt {
+    color: var(--gray-main);
+    line-height: 1.7;
+
+    @include up(lg) {
+      font-size: 16px;
+    }
+  }
+}

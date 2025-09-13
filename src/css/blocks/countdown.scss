@@ -1,0 +1,45 @@
+@use "../general/mixins" as *;
+
+.countdown {
+  $root: &;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  &__title {
+    @include font(16px, 22px, 500);
+    color: var(--gray-dark);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+  }
+
+  &__value {
+    @include font(16px, 26px, 600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 8px;
+
+    border-radius: 4px;
+
+    background-color: var(--gray-medium2);
+
+    color: var(--white);
+  }
+
+  &__separator {
+    width: 7px;
+    height: 20px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='20' viewBox='0 0 7 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3.93677' cy='3.26685' r='3.06323' fill='%23D9D9D9'/%3E%3Ccircle cx='3.93677' cy='16.3933' r='3.06323' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+  }
+}

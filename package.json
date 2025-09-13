@@ -1,0 +1,32 @@
+{
+  "name": "my-vanilla-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:ci": "stylelint \"**/*.scss\" --quiet",
+    "stylelint:fix": "stylelint --fix \"**/*.scss\"",
+    "svgo": "svgo --config=svgo.config.mjs -r -f ./public -o ./public"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "sass-embedded": "^1.89.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.12.1",
+    "svgo": "^4.0.0",
+    "vite": "^7.0.4",
+    "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4"
+  }
+}

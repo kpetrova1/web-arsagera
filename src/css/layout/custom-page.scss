@@ -1,0 +1,39 @@
+@use "../general/mixins" as *;
+
+.custom-page {
+  display: grid;
+
+  gap: 40px;
+
+  &__grid {
+    display: contents;
+
+    @include up(lg) {
+      display: grid;
+      grid-template-columns: 232px 1fr;
+      align-items: start;
+
+      gap: 28px;
+    }
+
+    @include up(xl) {
+      grid-template-columns: 290px 1fr;
+    }
+  }
+
+  &__aside {
+    order: -1;
+    margin-top: -20px;
+
+    @include up(lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__aside,
+  &__content {
+    display: grid;
+
+    gap: 40px;
+  }
+}

@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/src/site.webmanifest" />
+    <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
+  </head>
+  <body>
+    <!-- Top-bar block start -->
+    <load src="src/templates/top-bar.html" />
+    <!-- Top-bar block end -->
+
+    <!-- Header block start -->
+    <load src="src/templates/header.html" />
+    <!-- Header block end -->
+
+    <!-- Main block start -->
+    <main class="main">
+      <!-- Page container start -->
+      <div class="page container">
+        <!-- Breadcrumbs start -->
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Клиентам</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Лекции и видео</a>
+            </li>
+          </ol>
+        </nav>
+        <!-- Breadcrumbs end -->
+
+        <!-- Page grid start -->
+        <div class="page__grid">
+          <!-- Aside start -->
+          <aside class="page__aside order-2-down-md">
+            <!-- Block start -->
+            <section class="filter is-hidden" id="modal-filter">
+              <div class="filter__backdrop" data-modal-button="modal-filter"></div>
+              <div class="filter__content">
+                <div class="filter__header">
+                  <h3 class="filter__main-title">Фильтры</h3>
+                  <button
+                    class="filter__close"
+                    type="button"
+                    aria-label="закрыть окно"
+                    data-modal-button="modal-filter"
+                  >
+                    <svg viewBox="0 0 22 22" width="22" height="22">
+                      <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filter__body">
+                  <div class="filter__group">
+                    <h2 class="filter__title">Тематические разделы:</h2>
+                    <ul class="filter__list">
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Лекториум об инвестировании</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Факультатив по основам инвестирования</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Беседы об инвестициях</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Макромониторинг</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Рынок акций. Хит-парад</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Арсагера. Собственные средства</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Арсагера – акции 6.4</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Арсагера – фонд акций</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Арсагера – фонд смешанных инвестиций</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Арсагера – фонд облигаций КР 1.55</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Руководство пользователя</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-all-checkbox />
+                          <span class="toggle__button">ВСЕ</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filter__social">
+                    <p class="text-gray-dark text-medium">Видеоканалы компании</p>
+                    <ul class="social">
+                      <li class="social__item">
+                        <a href="#" class="social__link" aria-label="dzen">
+                          <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36">
+                            <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link" aria-label="youtube">
+                          <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36">
+                            <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link" aria-label="vkontakte">
+                          <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36">
+                            <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a href="#" class="social__link" aria-label="rutube">
+                          <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36">
+                            <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="filter__footer">
+                  <button class="button button_orange button_full-width" type="button" data-modal-button="modal-filter">
+                    Применить фильтры
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- Block end -->
+
+            <!-- Block start -->
+            <section class="side-block">
+              <h2 class="side-block__title text-orange">Опрос</h2>
+              <p class="text-blue">
+                Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на территории
+                РФ?
+              </p>
+              <form class="poll" action="/" data-poll-form>
+                <div class="poll__options">
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="vk" required />
+                    <span class="option__label">VK видео</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 25%"></span>
+                      <span class="option__percentage">25% (192)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="dzen" required />
+                    <span class="option__label">Дзен</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 9%"></span>
+                      <span class="option__percentage">9% (74)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="rutube" required />
+                    <span class="option__label">Rutube</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 22%"></span>
+                      <span class="option__percentage">22% (172)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="youtube" required />
+                    <span class="option__label">YouTube с ускоряющими настройками</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 44%"></span>
+                      <span class="option__percentage">44% (314)</span>
+                    </span>
+                  </label>
+                </div>
+
+                <button class="poll__submit button button_gray" type="submit" data-poll-submit>Проголосовать</button>
+                <p class="poll__total" data-poll-result hidden>Всего голосов: 782</p>
+              </form>
+            </section>
+            <!-- Block end -->
+          </aside>
+          <!-- Aside end -->
+
+          <!-- Content start -->
+          <div class="page__content order-1-down-md">
+            <!-- Block start -->
+            <section class="block block_24">
+              <div class="block__actions">
+                <button class="link link_blue hide-on-mobile" type="button" data-sort-button>
+                  <span>по дате публикации</span>
+                  <svg viewBox="0 0 8 13" width="8" height="13" aria-hidden="true">
+                    <use href="/sprite.svg#sort-icon" x="0" y="0"></use>
+                  </svg>
+                </button>
+                <button
+                  class="action-button hide-on-desktop"
+                  type="button"
+                  data-sort-button
+                  aria-label="по дате публикации"
+                >
+                  <svg viewBox="0 0 50 39" width="50" height="39" aria-hidden="true">
+                    <use href="/sprite.svg#sort-icon-2" x="0" y="0"></use>
+                  </svg>
+                </button>
+                <button
+                  class="action-button hide-on-desktop"
+                  type="button"
+                  aria-label="меню фильтров"
+                  data-modal-button="modal-filter"
+                >
+                  <svg viewBox="0 0 50 39" width="50" height="39" aria-hidden="true">
+                    <use href="/sprite.svg#filter-icon" x="0" y="0"></use>
+                  </svg>
+                  <span class="action-button__badge is-hidden" data-counter></span>
+                </button>
+                <ul class="selected-filter" data-filter-selected></ul>
+                <ul class="block__actions-social social social_small">
+                  <li class="social__item">
+                    <a href="#" class="social__link" aria-label="dzen">
+                      <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30">
+                        <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link" aria-label="youtube">
+                      <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                        <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link" aria-label="vkontakte">
+                      <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                        <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link" aria-label="rutube">
+                      <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                        <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <h1 class="block__title-small text-gray-dark">Итого видео - 14</h1>
+
+              <ul class="block block_24 list-reset">
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">
+                        Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024. При этом, если видео имеет
+                        более длинное наимнование, то оно выглядит вот так, а не как Вы думали
+                      </h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="post" href="#">
+                    <div class="post__iframe">
+                      <iframe
+                        allow="clipboard-write; autoplay"
+                        frameborder="0"
+                        src="https://rutube.ru/play/embed/e594a0e879451a053f32b4026c0768af"
+                        height="230"
+                        width="410"
+                      ></iframe>
+                    </div>
+                    <div class="post__content">
+                      <h3 class="post__title">Собственные средства компании #311. Обзор с 13.09.2024 по 27.09.2024.</h3>
+                      <p>Эксперт: Антон Мельников – управляющий трейдер</p>
+
+                      <div class="post__meta stat">
+                        <time datetime="2023-10-03">3 октября 2024</time>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                        <span class="stat__item">
+                          <svg viewBox="0 0 18 13" width="18" height="13">
+                            <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                          </svg>
+                          122
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Pagination start -->
+              <div class="pagination pagination_left">
+                <a href="#" class="pagination__btn pagination__btn_disabled pagination__btn_prev">
+                  Предыдущая
+                  <svg class="pagination__mobile-arrow" viewBox="0 0 26 26" width="26" height="26">
+                    <use href="/sprite.svg#pagination-arrow-prev" x="0" y="0"></use>
+                  </svg>
+                  <svg class="pagination__desktop-arrow" viewBox="0 0 13 20" width="13" height="20">
+                    <use href="/sprite.svg#pagination-desktop-arrow-prev" x="0" y="0"></use>
+                  </svg>
+                </a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">1</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">2</a>
+                ...
+                <a href="#" class="pagination__btn pagination__btn_active pagination__btn_in-between">333</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">4444</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">55555</a>
+                <a href="#" class="pagination__btn pagination__btn_next">
+                  <svg class="pagination__mobile-arrow" viewBox="0 0 26 26" width="26" height="26">
+                    <use href="/sprite.svg#pagination-arrow-next" x="0" y="0"></use>
+                  </svg>
+                  <svg class="pagination__desktop-arrow" viewBox="0 0 13 16" width="13" height="16">
+                    <use href="/sprite.svg#pagination-desktop-arrow-next" x="0" y="0"></use>
+                  </svg>
+                  Следующая
+                </a>
+              </div>
+              <!-- Pagination end -->
+            </section>
+            <!-- Block end -->
+          </div>
+          <!-- Content end -->
+        </div>
+        <!-- Page grid end -->
+      </div>
+      <!-- Page container end -->
+    </main>
+    <!-- Main block end -->
+
+    <!-- Footer block start -->
+    <load src="src/templates/footer.html" />
+    <!-- Footer block end -->
+
+    <!-- Modals start -->
+    <load src="src/templates/modals.html" />
+    <!-- Modals end -->
+
+    <script type="module" src="/src/js/default.js"></script>
+    <script type="module" src="/src/js/lectures.js"></script>
+  </body>
+</html>

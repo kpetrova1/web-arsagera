@@ -1,0 +1,11 @@
+@use "./default/default";
+
+// Page styles
+@use "./layout/page";
+@use "./elements/stat";
+@use "./elements/comment";
+@use "./elements/custom-tooltip";
+@use "./blocks/breadcrumbs";
+@use "./blocks/side-block";
+@use "./blocks/poll";
+@use "./blocks/comments";

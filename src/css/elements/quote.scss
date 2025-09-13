@@ -1,0 +1,18 @@
+@use "../general/mixins" as *;
+
+.quote {
+  @include font(16px, 24px, 400);
+  display: grid;
+  width: fit-content;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 10px 16px;
+
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-radius: 8px;
+
+  font-style: italic;
+
+  gap: 16px;
+}

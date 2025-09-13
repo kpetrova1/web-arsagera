@@ -1,0 +1,55 @@
+@use "../general/mixins" as *;
+
+.product-price {
+  display: grid;
+  max-width: 100%;
+  margin-top: 24px;
+  overflow: hidden;
+
+  gap: 24px;
+
+  @include up(xl) {
+    grid-template-columns: 874px 1fr;
+
+    row-gap: 50px;
+  }
+
+  &__table-box {
+    grid-column: 1/2;
+    max-width: 100%;
+    overflow: hidden;
+
+    text-align: center;
+  }
+
+  &__table {
+    width: 100%;
+    min-width: 700px;
+  }
+
+  &__message {
+    @include up(xl) {
+      grid-column: 2/3;
+      grid-row-start: 1;
+      margin-top: 35px;
+    }
+  }
+
+  &__info {
+    min-width: 700px;
+    margin-bottom: 20px;
+    padding-left: 22%;
+
+    color: var(--gray-dark);
+
+    text-align: right;
+    white-space: normal;
+  }
+
+  &__date {
+    margin-top: 6px;
+
+    color: var(--gray-tech);
+    text-align: right;
+  }
+}

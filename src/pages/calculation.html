@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/src/site.webmanifest" />
+    <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
+  </head>
+  <body>
+    <!-- Top-bar block start -->
+    <load src="src/templates/top-bar.html" />
+    <!-- Top-bar block end -->
+
+    <!-- Header block start -->
+    <load src="src/templates/header.html" />
+    <!-- Header block end -->
+
+    <!-- Main block start -->
+    <main class="main">
+      <!-- Page container start -->
+      <div class="page container">
+        <!-- Breadcrumbs start -->
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Клиентам</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Аналитика</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Индекс Арсагеры</a>
+            </li>
+          </ol>
+        </nav>
+        <!-- Breadcrumbs end -->
+
+        <!-- Content start -->
+        <div class="block block_16">
+          <!-- Accordion 1 start -->
+          <div class="accordion accordion_bordered" id="accordion1" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion1">Индекс Арсагеры</a>
+              <span class="accordion__title">Индекс Арсагеры</span>
+
+              <!-- Accordion tab buttons start -->
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner" data-accordion-tabs-inner>
+                  <a class="accordion__tab" href="#accordion1-tab1" data-tab="accordion1-tab1">
+                    <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
+                      <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
+                    </svg>
+                    Описание
+                  </a>
+
+                  <a class="accordion__tab" href="#accordion1-tab2" data-tab="accordion1-tab2">
+                    <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
+                      <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
+                    </svg>
+                    Подробно о расчете
+                  </a>
+                </div>
+              </div>
+              <!-- Accordion tab buttons end -->
+
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+              </svg>
+            </div>
+
+            <div class="accordion__content" data-accordion-content>
+              <div class="tabs" data-tabs>
+                <!-- Tab buttons start -->
+                <ul class="tabs__nav" data-tab-buttons>
+                  <li>
+                    <a class="tabs__nav-button is-active" href="#accordion1-tab1" data-tab="accordion1-tab1"
+                    >Описание</a
+                    >
+                  </li>
+                  <li>
+                    <a class="tabs__nav-button" href="#accordion1-tab2" data-tab="accordion1-tab2">Подробно о расчете</a>
+                  </li>
+                </ul>
+                <!-- Tab buttons end -->
+
+                <!-- Tab 1 start -->
+                <div id="accordion1-tab1" class="tabs__content is-active" data-tab-content>
+                  <div class="block block_40">
+                      <div class=" block block_16">
+                        <p>
+                          Индекс Арсагеры — это расчетный индекс, который демонстрирует величину отклонения
+                          фундаментальной (расчетной) капитализации индекса МосБиржи от его фактического значения.
+                        </p>
+
+                        <div class="formula">
+                          <div class="formula__table">
+                            <div>
+                              <div class="formula__item">Расчетная капитализация МосБиржи</div>
+                              <div class="formula__item">Фактическая капитализация МосБиржи</div>
+                            </div>
+                            <div class="formula__result">
+                              =
+                              <span class="text-orange">Индекс Арсагеры<sup class="text-gray-main">*</sup></span>
+                              =
+                            </div>
+                            <div>
+                              <div class="formula__item">Фундаментальное значение МосБиржи</div>
+                              <div class="formula__item">Фактическое значение МосБиржи</div>
+                            </div>
+                          </div>
+                          <p class="formula__hint">
+                            <sup>*</sup>значение индекса Арсагеры нормировано относительно базы
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="formula">
+                        <div class="formula__table formula__table_light">
+                          <div class="formula__head">Дата расчета: 19 декабря 2024 г.</div>
+                          <div>
+                            <div class="formula__item">4 413 млрд руб.</div>
+                            <div class="formula__item">4 681 млрд руб.</div>
+                          </div>
+                          <div class="formula__result">
+                            =
+                            <span class="text-orange">– 5,73%</span>
+                            =
+                          </div>
+                          <div>
+                            <div class="formula__item">2 277,89</div>
+                            <div class="formula__item">2 416,45</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <img src="/charts9.jpg" alt="" loading="lazy" />
+                  </div>
+                </div>
+                <!-- Tab 1 end -->
+
+                <!-- Tab 2 start -->
+                <div id="accordion1-tab2" class="tabs__content" data-tab-content>
+                  <div class="block  block_16">
+                      <p>
+                        Первый этап расчета индекса — оценка доходности, требуемой от вложения в долевые инструменты.
+                        Для ее определения мы использовали информацию об уровне доходности долговых инструментов. В
+                        данном случае корзины ОФЗ (облигации федерального займа), но, возможно, в дальнейшем мы будем
+                        использовать индекс CBonds. Доходность долговых инструментов позволяет определить доходность,
+                        требуемую от вложения в долевые инструменты, другими словами, получить коэффициент E/P (величина
+                        обратная Р/Е).
+                      </p>
+                      <p>
+                        При доходности корзины ОФЗ более 8% мы будем рассчитывать доходность, требуемую от вложений в
+                        долевые инструменты, как доходность корзины ОФЗ, увеличенную в 1,5 раза. При доходности корзины
+                        ОФЗ менее или равной 8% мы будем будем рассчитывать доходность, требуемую от вложений в долевые
+                        инструменты, как доходность корзины ОФЗ, увеличенную на 4%. Например, при доходности корзины ОФЗ
+                        равной 10% доходность, требуемая от вложений в долевые инструменты, будет равна 10%*1,5 = 15%.
+                        При доходности корзины ОФЗ равной 5% доходность, требуемая от вложений в долевые инструменты,
+                        будет равна 5%+4%=9%. Значение 4% характеризует долгосрочную премию долевых инструментов к
+                        долговым. Подробнее об этом в нашем материале
+                        <a class="link link_blue" href="#"
+                        >«Сравнительное исследование эффективности инвестиций в мире»</a
+                        >.
+                      </p>
+                      <p>
+                        На момент запуска индекса ставки по облигациям были достаточно высокими, поэтому мы приняли
+                        решение использовать коэффициент 1,5. В последующем алгоритм был доработан из-за снижения
+                        ставок. При ставке облигаций 1% неадекватно ожидать от вложений в акции 1,5%. В этом случае
+                        более правильным является 1%+ 4% = 5%. Но при ставках по облигациям 30%, нелогично ожидать от
+                        акций 30% + 4% = 34%, 30%*1,5 =45% выглядит в этом случае более разумно.
+                      </p>
+                      <p>
+                        На втором этапе, используя информацию о прибылях компаний, входящих в индекс МосБиржи, мы
+                        рассчитываем фундаментальную капитализацию индекса МосБиржи по следующей формуле:
+                      </p>
+                      <p>Pфунд = E/(E/P),  где</p>
+                      <p>Pфунд — фундаментальная капитализация индекса МосБиржи;</p>
+                      <p>
+                        E — прибыль компаний, входящих в индекс МосБиржи (прибыль берется скользящим окном за 4
+                        квартала);
+                      </p>
+                      <p>E/P — доходность, требуемая от вложения в долевые инструменты.</p>
+                      <p>
+                        Третий этап. Разделив фундаментальную капитализацию индекса МосБиржи на фактическую (и выразив
+                        эту величину как процентное отклонение), получаем цифровую характеристику отклонения
+                        фундаментальной капитализации от фактической — индекс Арсагеры.
+                      </p>
+                      <p>
+                        Исходя из значений индекса Арсагеры и МосБиржи, рассчитывается фундаментальное значение индекса
+                        МосБиржи.
+                      </p>
+                      <p>
+                        Подробнее о том как трактовать значения индекса Арсагеры читайте в материале
+                        <a class="link link_blue" href="#"
+                        >«Фундаментальная оценка российского фондового рынка — индекс Арсагеры»</a
+                        >.
+                      </p>
+                  </div>
+                </div>
+                <!-- Tab 2 end -->
+              </div>
+            </div>
+          </div>
+          <!-- Accordion 1 end -->
+
+          <!-- Accordion 2 start -->
+          <div class="accordion accordion_bordered" id="accordion2" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion2">Фундаментальный индекс МосБиржи</a>
+              <span class="accordion__title">Фундаментальный индекс МосБиржи</span>
+
+
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+              </svg>
+            </div>
+
+            <div class="accordion__content" data-accordion-content>
+              <img src="/charts8.jpg" loading="lazy" />
+            </div>
+          </div>
+          <!-- Accordion 2 end -->
+
+          <!-- Accordion 3 start -->
+          <div class="accordion accordion_bordered" id="accordion3" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion3">Индекс МосБиржи</a>
+              <span class="accordion__title">Индекс МосБиржи</span>
+
+
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+              </svg>
+            </div>
+
+            <div class="accordion__content" data-accordion-content>
+              <img src="/charts8.jpg" loading="lazy" />
+            </div>
+          </div>
+          <!-- Accordion 3 end -->
+
+          <!-- Accordion 4 start -->
+          <div class="accordion accordion_bordered" id="accordion4" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion4">Новости эмитентов</a>
+              <span class="accordion__title">Новости эмитентов</span>
+
+
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+              </svg>
+            </div>
+
+            <div class="accordion__content" data-accordion-content>
+              <ul class="block block_12 list-reset">
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+                <li>
+                  <time class="text-gray-dark" datetime="2023-10-20">20.10.2023</time>
+                  Прибыль ПАО «ИНТЕР РАО ЕЭС» по итогам 3 квартала 2024 года 108 958 млн. руб.
+                </li>
+              </ul>
+
+              <!-- Pagination start -->
+              <div class="pagination pagination_left">
+                <a href="#" class="pagination__btn pagination__btn_disabled pagination__btn_prev">
+                  Предыдущая
+                  <svg class="pagination__mobile-arrow" viewBox="0 0 26 26" width="26" height="26">
+                    <use href="/sprite.svg#pagination-arrow-prev" x="0" y="0"></use>
+                  </svg>
+                  <svg class="pagination__desktop-arrow" viewBox="0 0 13 20" width="13" height="20">
+                    <use href="/sprite.svg#pagination-desktop-arrow-prev" x="0" y="0"></use>
+                  </svg>
+                </a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">1</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">2</a>
+                ...
+                <a href="#" class="pagination__btn pagination__btn_active pagination__btn_in-between">333</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">4444</a>
+                <a href="#" class="pagination__btn pagination__btn_in-between">55555</a>
+                <a href="#" class="pagination__btn pagination__btn_next">
+                  <svg class="pagination__mobile-arrow" viewBox="0 0 26 26" width="26" height="26">
+                    <use href="/sprite.svg#pagination-arrow-next" x="0" y="0"></use>
+                  </svg>
+                  <svg class="pagination__desktop-arrow" viewBox="0 0 13 16" width="13" height="16">
+                    <use href="/sprite.svg#pagination-desktop-arrow-next" x="0" y="0"></use>
+                  </svg>
+                  Следующая
+                </a>
+              </div>
+              <!-- Pagination end -->
+            </div>
+          </div>
+          <!-- Accordion 4 end -->
+        </div>
+        <!-- Content end -->
+        </div>
+      </div>
+      <!-- Page container end -->
+    </main>
+    <!-- Main block end -->
+
+    <!-- Footer block start -->
+    <load src="src/templates/footer.html" />
+    <!-- Footer block end -->
+
+    <!-- Modals start -->
+    <load src="src/templates/modals.html" />
+    <!-- Modals end -->
+
+    <script type="module" src="/src/js/default.js"></script>
+    <script type="module" src="/src/js/calculation.js"></script>
+  </body>
+</html>

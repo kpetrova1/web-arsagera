@@ -1,0 +1,40 @@
+@use "../general/mixins" as *;
+
+.person-info {
+  display: grid;
+  grid-template-columns: 158px 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+
+  gap: 16px 22px;
+
+  &__image {
+    grid-column: 1/2;
+
+    border-radius: 4px;
+
+    @include up(md) {
+      grid-row: 1 / span 2;
+    }
+  }
+
+  &__name {
+    @include font(16px, 26px, 500);
+    color: var(--gray-dark);
+  }
+
+  &__position {
+    @include font(16px, 24px, 300);
+    color: var(--gray-tech);
+    font-style: italic;
+  }
+
+  &__text {
+    @include font(16px, 26px, 400);
+    grid-column: 1/3;
+
+    @include up(md) {
+      grid-column: auto;
+    }
+  }
+}

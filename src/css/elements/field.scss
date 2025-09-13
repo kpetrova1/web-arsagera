@@ -1,0 +1,33 @@
+@use "../general/mixins" as *;
+
+.field {
+  display: grid;
+
+  &__label {
+    @include font(16px, 26px, 400);
+    color: var(--gray-tech);
+  }
+
+  &__input {
+    padding: 10px 16px;
+
+    border: 1px solid var(--gray-tech);
+    border-radius: 4px;
+    outline-color: rgb(51, 51, 51);
+
+    color: var(--gray-main);
+
+    &:is(select) {
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.48877L10.9777 11.4664' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M10.9783 11.5112L20.999 1.48856' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 16px);
+
+      appearance: none;
+    }
+  }
+}
+
+.field-hint {
+  @include font(16px, 26px, 400);
+  color: var(--gray-medium2);
+}

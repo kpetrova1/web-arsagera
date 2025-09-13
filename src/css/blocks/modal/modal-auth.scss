@@ -1,0 +1,35 @@
+@use "../../general/mixins" as *;
+
+.modal-auth {
+  width: 485px;
+  max-width: 100%;
+  padding: 32px 16px;
+
+  @include up(sm) {
+    padding: 32px;
+  }
+
+  &__title {
+    @include font(18px, 22px, 600);
+    margin-bottom: 20px;
+
+    color: var(--orange);
+  }
+
+  &__form {
+    display: grid;
+
+    gap: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  &__button {
+    align-self: flex-end;
+  }
+}

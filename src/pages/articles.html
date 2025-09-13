@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/src/site.webmanifest" />
+    <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
+  </head>
+  <body>
+    <!-- Top-bar block start -->
+    <load src="src/templates/top-bar.html" />
+    <!-- Top-bar block end -->
+
+    <!-- Header block start -->
+    <load src="src/templates/header.html" />
+    <!-- Header block end -->
+
+    <!-- Main block start -->
+    <main class="main">
+      <!-- Page container start -->
+      <div class="page container">
+        <!-- Breadcrumbs start -->
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Клиентам</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Статьи</a>
+            </li>
+          </ol>
+        </nav>
+        <!-- Breadcrumbs end -->
+
+        <!-- Page grid start -->
+        <div class="page__grid">
+          <!-- Aside start -->
+          <aside class="page__aside order-2-down-md">
+            <!-- Block start -->
+            <section class="filter is-hidden" id="modal-filter">
+              <div class="filter__backdrop" data-modal-button="modal-filter"></div>
+              <div class="filter__content">
+                <div class="filter__header">
+                  <h3 class="filter__main-title">Фильтры</h3>
+                  <button
+                    class="filter__close"
+                    type="button"
+                    aria-label="закрыть окно"
+                    data-modal-button="modal-filter"
+                  >
+                    <svg viewBox="0 0 22 22" width="22" height="22">
+                      <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="filter__body">
+                  <div class="option">
+                    <label class="option">
+                      <input class="option__input" type="checkbox" name="control" required />
+                      <span class="option__label">
+                        Как в книге: <a class="link link_blue" href="#">Заметки в инвестировании</a>
+                      </span>
+                    </label>
+                  </div>
+
+                  <div class="filter_group">
+                    <h2 class="filter__title">Уровень сложности:</h2>
+                    <ul class="filter__list">
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="degree" data-checkbox />
+                          <span class="toggle__button">Школа</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="degree" data-checkbox />
+                          <span class="toggle__button">Университет</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="degree" data-checkbox />
+                          <span class="toggle__button">Аспирантура</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="degree" data-checkbox />
+                          <span class="toggle__button">Факультатив</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="degree" data-all-checkbox />
+                          <span class="toggle__button">ВСЕ</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="filter_group">
+                    <h2 class="filter__title">Тематические разделы:</h2>
+                    <ul class="filter__list">
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Ваш самый главный актив</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Как переиграть инфляцию</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Зачем нам фондовый рынок</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Как начать инвестировать</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Инвестиционные опасности</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">От чего зависит курсовая стоимость акций</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">О фундаментальном анализе</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Как инвестировать самостоятельно</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Корпоративное управление</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">ПИФ: инвестируем коллективно</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Как выбрать управляющего</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Полезная информация об инвестициях</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Какая отчетность должна быть у каждого инвестора</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Управление капиталом в УК «Арсагера»</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-checkbox />
+                          <span class="toggle__button">Система управления капиталом</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="toggle">
+                          <input class="visually-hidden" type="checkbox" name="theme" data-all-checkbox />
+                          <span class="toggle__button">ВСЕ</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="filter__footer">
+                  <button class="button button_orange button_full-width" type="button" data-modal-button="modal-filter">
+                    Применить фильтры
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- Block end -->
+
+            <!-- Block start -->
+            <section class="side-block">
+              <h2 class="side-block__title text-orange">Опрос</h2>
+              <p class="text-blue">
+                Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на территории
+                РФ?
+              </p>
+              <form class="poll" action="/" data-poll-form>
+                <div class="poll__options">
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="vk" required />
+                    <span class="option__label">VK видео</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 25%"></span>
+                      <span class="option__percentage">25% (192)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="dzen" required />
+                    <span class="option__label">Дзен</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 9%"></span>
+                      <span class="option__percentage">9% (74)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="rutube" required />
+                    <span class="option__label">Rutube</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 22%"></span>
+                      <span class="option__percentage">22% (172)</span>
+                    </span>
+                  </label>
+
+                  <label class="poll__option option">
+                    <input class="option__input" type="radio" name="media-source" value="youtube" required />
+                    <span class="option__label">YouTube с ускоряющими настройками</span>
+                    <span class="option__result">
+                      <span class="option__progress" style="width: 44%"></span>
+                      <span class="option__percentage">44% (314)</span>
+                    </span>
+                  </label>
+                </div>
+
+                <button class="poll__submit button button_gray" type="submit" data-poll-submit>Проголосовать</button>
+                <p class="poll__total" data-poll-result hidden>Всего голосов: 782</p>
+              </form>
+            </section>
+            <!-- Block end -->
+          </aside>
+          <!-- Aside end -->
+
+          <!-- Content start -->
+          <div class="page__content order-1-down-md">
+            <!-- Block start -->
+            <section class="block block_24">
+              <div class="block__actions">
+                <div class="action-dropdown">
+                  <button
+                    class="action-dropdown__button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="sort-dropdown"
+                    id="sort-dropdown-button"
+                    aria-label="сортировать"
+                    data-action-dropdown-toggle
+                  >
+                    <span class="hide-on-mobile">По дате публикации</span>
+                    <svg
+                      class="action-dropdown__icon hide-on-mobile"
+                      viewBox="0 0 23 10"
+                      width="23"
+                      height="10"
+                      aria-hidden="true"
+                    >
+                      <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
+                    </svg>
+                    <svg class="hide-on-desktop" viewBox="0 0 50 39" width="50" height="39" aria-hidden="true">
+                      <use href="/sprite.svg#sort-icon-2" x="0" y="0"></use>
+                    </svg>
+                  </button>
+                  <div class="action-dropdown__menu">
+                    <h3 class="action-dropdown__title">Сортировать по</h3>
+                    <ul
+                      class="action-dropdown__list"
+                      id="sort-dropdown"
+                      role="menu"
+                      aria-labelledby="sort-dropdown-button"
+                    >
+                      <li role="none" class="action-dropdown__item">
+                        <label class="action-dropdown__control is-hidden" data-sort-button>
+                          <span>По дате публикации</span>
+                          <input class="action-dropdown__input" type="radio" name="sort" checked />
+                        </label>
+                      </li>
+                      <li role="none" class="action-dropdown__item">
+                        <label class="action-dropdown__control" data-sort-button>
+                          <span>По дате обновления</span>
+                          <input class="action-dropdown__input" type="radio" name="sort" />
+                        </label>
+                      </li>
+                      <li role="none" class="action-dropdown__item">
+                        <label class="action-dropdown__control" data-sort-button>
+                          <span>По дате последнего комментария</span>
+                          <input class="action-dropdown__input" type="radio" name="sort" />
+                        </label>
+                      </li>
+                      <li role="none" class="action-dropdown__item">
+                        <label class="action-dropdown__control" data-sort-button>
+                          <span>По количеству просмотров</span>
+                          <input class="action-dropdown__input" type="radio" name="sort" />
+                        </label>
+                      </li>
+                      <li role="none" class="action-dropdown__item">
+                        <label class="action-dropdown__control" data-sort-button>
+                          <span>По количеству комментариев</span>
+                          <input class="action-dropdown__input" type="radio" name="sort" />
+                        </label>
+                      </li>
+                    </ul>
+                    <div class="action-dropdown__footer">
+                      <button class="button button_gray button_full-width" type="button" data-action-dropdown-button>
+                        Отменить
+                      </button>
+                      <button class="button button_orange button_full-width" type="button" data-action-dropdown-button>
+                        Сохранить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="action-button hide-on-desktop"
+                  type="button"
+                  aria-label="меню фильтров"
+                  data-modal-button="modal-filter"
+                >
+                  <svg viewBox="0 0 50 39" width="50" height="39" aria-hidden="true">
+                    <use href="/sprite.svg#filter-icon" x="0" y="0"></use>
+                  </svg>
+                  <span class="action-button__badge is-hidden" data-counter></span>
+                </button>
+                <ul class="selected-filter" data-filter-selected></ul>
+              </div>
+
+              <h1 class="block__title-small text-gray-dark">Итого статей - 500</h1>
+
+              <div class="block block_16">
+                <h2 class="block__title-small text-orange">Ваш самый главный актив</h2>
+                <ul class="block block_8 list-reset">
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">
+                          Инвестиции, почему они необходимы. А если название оооочень длинное, то это выглядит очень
+                          примерно вот так
+                        </h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Ваш самый главный актив - это Вы сами!</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Как Вы будете жить на пенсии?</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Пенсия или автомобиль?</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Философия владения активами</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Не все богатые одинаково полезны</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Планирование пенсии</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="block block_16">
+                <h2 class="block__title-small text-orange">Как переиграть инфляцию?</h2>
+                <ul class="block block_8 list-reset">
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Зачем Вам деньги?</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Что может защитить Вас от инфляции?</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">
+                          Как выигрывать от инфляции: владение vs потребление
+                        </h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Производительные и не производительные активы</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="post" href="#">
+                      <div class="post__content">
+                        <h3 class="post__title post__title_regular">Абстракция денег</h3>
+
+                        <div class="stat">
+                          <time datetime="2023-10-03">3 октября 2024</time>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                          <span class="stat__item">
+                            <svg viewBox="0 0 18 13" width="18" height="13">
+                              <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                            </svg>
+                            122
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- Block end -->
+          </div>
+          <!-- Content end -->
+        </div>
+        <!-- Page grid end -->
+      </div>
+      <!-- Page container end -->
+    </main>
+    <!-- Main block end -->
+
+    <!-- Footer block start -->
+    <load src="src/templates/footer.html" />
+    <!-- Footer block end -->
+
+    <!-- Modals start -->
+    <load src="src/templates/modals.html" />
+    <!-- Modals end -->
+
+    <script type="module" src="/src/js/default.js"></script>
+    <script type="module" src="/src/js/articles.js"></script>
+  </body>
+</html>

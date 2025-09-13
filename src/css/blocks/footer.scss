@@ -1,0 +1,141 @@
+@use "../general/mixins" as *;
+
+.footer {
+  padding-bottom: 14px;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    padding-top: 30px;
+
+    border-top: 2px solid rgba(102, 102, 102, 0.2);
+
+    gap: 20px;
+
+    @include up(lg) {
+      grid-template-columns: 380px 1fr;
+    }
+
+    @include up(xl) {
+      gap: 136px;
+    }
+  }
+
+  &__main {
+    @include up(md) {
+      padding-left: 25px;
+    }
+  }
+
+  &__brand {
+    display: flex;
+
+    gap: 16px;
+
+    @include up(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__copyright {
+    @include font(12px, 15px, 400);
+    display: grid;
+
+    gap: 9px;
+
+    @include up(lg) {
+      @include font(14px, 17px);
+    }
+  }
+
+  &__social {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @include up(lg) {
+      margin-top: 42px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__social-title {
+    @include font(16px, 19px, 500);
+    margin-bottom: 12px;
+  }
+
+  &__protection-link {
+    line-height: 1.625;
+  }
+
+  &__nav {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+
+    gap: 47px;
+
+    @include up(md) {
+      display: grid;
+    }
+  }
+
+  &__nav-title {
+    margin-bottom: 16px;
+  }
+
+  &__nav-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: 16px;
+  }
+
+  &__nav-main-link {
+    color: var(--gray-dark);
+    font-weight: 500;
+  }
+
+  &__nav-link {
+    line-height: 1.625;
+  }
+
+  &__text {
+    display: grid;
+    margin-top: 30px;
+
+    line-height: 1.625;
+
+    word-spacing: 3px;
+
+    gap: 34px;
+
+    @include up(md) {
+      margin-top: 60px;
+    }
+  }
+
+  &__legal {
+    display: grid;
+    margin-top: 24px;
+
+    gap: 16px;
+
+    @include up(md) {
+      margin-top: 60px;
+    }
+  }
+
+  &__policies {
+    display: grid;
+    margin-top: 24px;
+
+    gap: 16px;
+  }
+}

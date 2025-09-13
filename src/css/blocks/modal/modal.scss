@@ -1,0 +1,48 @@
+@use "../../general/mixins" as *;
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  padding: 20px;
+
+  background-color: #00000026;
+
+  inset: 0;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  &__backdrop {
+    position: absolute;
+
+    inset: 0;
+  }
+
+  &__box {
+    position: relative;
+    max-height: calc(100% - 40px);
+    margin: auto;
+    overflow-y: auto;
+
+    border-radius: 4px;
+
+    background-color: var(--white);
+    box-shadow: 0 0 20px 0 #00000026;
+  }
+
+  &__close-button {
+    position: absolute;
+    z-index: 1;
+    top: 22px;
+    right: 22px;
+    padding: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+  }
+}

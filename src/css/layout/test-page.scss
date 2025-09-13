@@ -1,0 +1,47 @@
+@use "../general/mixins" as *;
+
+.test-page {
+  display: grid;
+
+  gap: 40px;
+
+  &__grid {
+    display: grid;
+    align-items: start;
+
+    gap: 28px;
+
+    @include up(lg) {
+      grid-template-columns: 310px 1fr;
+    }
+
+    @include up(xl) {
+      grid-template-columns: 400px 1fr;
+    }
+
+    &_column-down-lg {
+      @include down(lg) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__aside,
+  &__content {
+    display: grid;
+
+    gap: 40px;
+
+    &_contents-down-md {
+      @include down(md) {
+        display: contents;
+      }
+    }
+
+    &_contents-down-lg {
+      @include down(lg) {
+        display: contents;
+      }
+    }
+  }
+}

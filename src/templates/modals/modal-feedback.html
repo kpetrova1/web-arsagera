@@ -1,0 +1,75 @@
+<div class="modal is-hidden" id="modal-feedback" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-feedback"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-feedback">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-feedback">
+      <form class="modal-feedback__form" data-modal-form>
+        <h2 class="modal-feedback__title">Обратная связь</h2>
+        <div class="modal-feedback__text">
+          <p>Ваше мнение очень важно для нас!</p>
+          <p>
+            Если Вы хотите оставить сообщение, выберите в выпадающем списке «Оставить сообщение». Наши менеджеры
+            свяжутся с Вами в ближайшее время.
+          </p>
+          <p>
+            Если Вы хотите оставить пожелание к работе нашей компании, пожаловаться или выразить благодарность, выберите
+            в выпадающем списке «Оставить пожелание» или «Пожаловаться», и Ваше обращение будет напрямую получено
+            Председателем Правления компании, а также Зам. Председателя Правления.
+          </p>
+          <p>
+            Указывайте, пожалуйста, актуальный адрес электронной почты для того, чтобы мы смогли отправить Вам ответ.
+          </p>
+        </div>
+        <label class="field">
+          <span class="field__label">Представьтесь*</span>
+          <select class="field__input" required>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+          </select>
+        </label>
+        <label class="field">
+          <span class="field__label">Представьтесь*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Телефон*</span>
+          <input class="field__input" type="number" />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта*</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение*</span>
+          <textarea class="modal-feedback__textarea field__input" required></textarea>
+        </label>
+        <label class="option">
+          <input class="option__input" type="checkbox" />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
+        </label>
+        <div class="modal-feedback__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="modal-feedback__button button button_orange button_large" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div class="modal-feedback__feedback is-hidden">
+        <p>Благодарим за обращение!</p>
+        <p>В ближайшее время сотрудники нашей компании свяжутся с Вами.</p>
+        <p>
+          Напоминаем, что компания работает по будним дням с 10 до 19:00. Если Вы заказали звонок в выходной или
+          праздничный день, то наш сотрудник свяжется с Вами в первый рабочий день.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

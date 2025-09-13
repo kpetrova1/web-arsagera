@@ -1,0 +1,15 @@
+@use "./default/default";
+
+// Page styles
+@use "./layout/page";
+@use "./elements/file-link";
+@use "./elements/tab-scroll";
+@use "./blocks/table-scroll";
+@use "./blocks/table";
+@use "./blocks/accordion";
+@use "./blocks/tabs";
+@use "./blocks/message";
+@use "./blocks/product-price";
+@use "./blocks/fund-structure-table";
+@use "./blocks/product-files";
+@use "./blocks/breadcrumbs";

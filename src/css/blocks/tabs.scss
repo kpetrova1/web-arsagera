@@ -1,0 +1,96 @@
+@use "../general/mixins" as *;
+
+.tabs {
+  $root: &;
+  min-width: 0;
+
+  &__nav {
+    display: flex;
+    margin: 0;
+    padding: 11px;
+    overflow-x: auto;
+
+    border-right: 1px solid var(--gray-tech);
+    border-left: 1px solid var(--gray-tech);
+    border-radius: 4px;
+
+    background-color: var(--gray-bg);
+
+    list-style: none;
+
+    gap: 6px;
+  }
+
+  &__nav-underline {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    border-bottom: 1.5px solid var(--blue);
+
+    list-style: none;
+  }
+
+  &__nav-button {
+    @include font(16px, 19px, 500);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 8px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+    white-space: nowrap;
+
+    @include hover {
+      background-color: var(--gray-main);
+
+      color: var(--white);
+    }
+
+    &.is-active {
+      background-color: var(--gray-main);
+
+      color: var(--white);
+    }
+  }
+
+  &__flat-button {
+    @include font(16px, 19px, 400);
+    display: inline-flex;
+    padding: 8px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+    white-space: nowrap;
+
+    @include hover {
+      color: var(--blue);
+    }
+
+    &.is-active {
+      color: var(--blue);
+      font-weight: 600;
+    }
+  }
+
+  &__content {
+    @include font(16px, 26px, 400);
+    display: none;
+    padding-top: 24px;
+
+    scroll-margin: 124px;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
