@@ -5,7 +5,6 @@
   min-width: 0;
 
   &__nav {
-    display: flex;
     margin: 0;
     padding: 11px;
     overflow-x: auto;
@@ -16,6 +15,10 @@
     list-style: none;
 
     gap: 6px;
+
+    .simplebar-content {
+      display: flex;
+    }
   }
 
   &__nav-underline {

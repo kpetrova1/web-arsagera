@@ -5,6 +5,7 @@ import { menuMobile } from './modules/menuMobile.js';
 import { selectCategory } from './modules/selectCategory.js';
 import { setActiveNav } from './modules/setActiveNav.js';
 import { menuDropdown } from './modules/menuDropdown.js';
+import SimpleBar from "simplebar";
 
 document.addEventListener('DOMContentLoaded', function () {
   dropdown('[data-auth-toggle]');
@@ -14,4 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
   menuMobile();
   selectCategory('[data-categories-toggle]', '[data-categories-link]');
   setActiveNav();
+
+  const tabNavs = document.querySelectorAll('[data-tab-buttons]');
+  if(tabNavs.length) {
+    Array.prototype.forEach.call(
+        tabNavs,
+        (el) => new SimpleBar(el, { autoHide: false })
+    );
+  }
 });
