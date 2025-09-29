@@ -66,6 +66,20 @@
   }
 }
 
+.hide-table-on-mobile {
+  @media (max-width: 600px) {
+    // stylelint-disable
+    display: none !important;
+  }
+}
+
+.hide-accordions-on-desktop {
+  @media (min-width: 601px) {
+    // stylelint-disable
+    display: none !important;
+  }
+}
+
 .is-inverted {
   transform: scaleY(-1);
 }
