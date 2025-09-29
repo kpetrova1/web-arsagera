@@ -3,9 +3,9 @@
 .modal-search {
   width: 748px;
   max-width: 100%;
-  padding: 116px 16px 40px;
+  padding: 56px 16px 40px;
 
   @include up(sm) {
-    padding: 116px 36px 40px;
+    padding: 56px 36px 40px;
   }
 }
