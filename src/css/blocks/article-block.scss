@@ -17,4 +17,16 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  h1, h3 {
+    color: var(--orange)
+  }
+
+  h2 {
+    color: var(--gray-dark)
+  }
+
+  h4, h5, h6 {
+    color: var(--blue)
+  }
 }

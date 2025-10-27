@@ -33,6 +33,13 @@
     pointer-events: none;
   }
 
+  &:disabled {
+    pointer-events: none;
+    background-color: var(--gray-medium2);
+    box-shadow: inset 0 0 0 1px var(--gray-medium2);
+    color: var(--white);
+  }
+
   &:has(svg) {
     justify-content: space-between;
 
@@ -105,4 +112,12 @@
   svg {
     flex-shrink: 0;
   }
+}
+
+button:disabled,
+.is-button-disabled {
+  pointer-events: none;
+  background-color: var(--gray-medium2);
+  box-shadow: inset 0 0 0 1px var(--gray-medium2);
+  color: var(--white);
 }
