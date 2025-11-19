@@ -7,6 +7,10 @@
 
   gap: 4px;
 
+  &.is-hidden {
+    display: none
+  }
+
   &__button {
     display: flex;
     align-items: center;
