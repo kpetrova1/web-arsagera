@@ -10,7 +10,7 @@ export function closeOtherAccordions(currentAccordion) {
 }
 
 export function switchTab(tabsContainer, tabId) {
-  const tabButtons = tabsContainer.querySelectorAll(':scope > ul [data-tab]');
+  const tabButtons = tabsContainer.querySelectorAll(':scope > div [data-tab]');
   const tabContents = tabsContainer.querySelectorAll(':scope > [data-tab-content]');
   const accordionContainer = tabsContainer.closest('[data-accordion]');
 
