@@ -10,31 +10,35 @@
     <div class="modal-question">
       <h2 class="modal-question__title">Вопрос на сайт</h2>
 
-      <form class="modal-question__form">
+      <form class="modal-question__form" data-modal-faq-form>
         <label class="field">
           <span class="field__label">Представьтесь, пожалуйста*</span>
-          <input class="field__input" type="text" required />
+          <input class="field__input" type="text" name="name" required>
         </label>
+
         <label class="field">
           <span class="field__label">Электронная почта или логин</span>
-          <input class="field__input" type="email" required />
+          <input class="field__input" type="email" name="email" required>
         </label>
+
         <label class="field">
           <span class="field__label">Задайте Ваш вопрос*</span>
-          <textarea class="modal-question__textarea field__input" required></textarea>
+          <textarea class="modal-question__textarea field__input" name="question" required></textarea>
         </label>
+
         <div class="modal-question__code">
           <label class="field">
             <span class="field__label">Защитный код</span>
-            <input class="field__input" type="text" required />
+            <input class="field__input" type="text" name="g-recaptcha-response" required>
           </label>
           <div class="modal-question__captcha">captcha</div>
         </div>
+
         <label class="option">
-          <input class="option__input" type="checkbox" required />
-          <span class="option__label"
-            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
-          >
+          <input class="option__input" type="checkbox" name="consent" required>
+          <span class="option__label">
+      Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных
+    </span>
         </label>
 
         <div class="modal-question__footer">
@@ -42,6 +46,7 @@
           <button class="button button_orange button_full-width button_large" type="submit">Отправить вопрос</button>
         </div>
       </form>
+
     </div>
   </div>
 </div>

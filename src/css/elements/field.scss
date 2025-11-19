@@ -24,6 +24,15 @@
 
       appearance: none;
     }
+
+    .field_error & {
+      border-color: var(--orange)
+    }
+  }
+
+  &__error-message {
+    @include font(16px, 26px, 400);
+    color: var(--orange)
   }
 }
 

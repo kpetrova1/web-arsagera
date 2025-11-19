@@ -39,4 +39,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/faq/store-test': {
+        target: 'https://webhook.site/9077b924-317b-47a5-b7f3-f40c48f6de40',
+        changeOrigin: true,
+        rewrite: (path) => path.replace('/faq/store-test', '')
+      }
+    }
+  }
 });
