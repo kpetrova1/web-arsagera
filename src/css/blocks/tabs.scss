@@ -18,6 +18,8 @@
 
     .simplebar-content {
       display: flex;
+
+      gap: 6px;
     }
   }
 
@@ -29,6 +31,10 @@
     border-bottom: 1.5px solid var(--blue);
 
     list-style: none;
+
+    .simplebar-content {
+      display: flex;
+    }
   }
 
   &__nav-button {
