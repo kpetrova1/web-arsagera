@@ -74,6 +74,14 @@
 
       color: var(--white);
     }
+
+
+
+    &:disabled,
+    &.is-button-disabled {
+      background-color: transparent;
+      box-shadow: none;
+    }
   }
 
   &_gray-solid {

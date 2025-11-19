@@ -20,7 +20,10 @@
 
     color: var(--blue);
 
-    &:disabled {
+    &:disabled,
+    &.is-button-disabled {
+      background-color: transparent;
+      box-shadow: none;
       color: var(--gray-tech);
     }
   }
