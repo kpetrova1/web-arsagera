@@ -90,3 +90,8 @@
     margin-left: 24px;
   }
 }
+
+.form-global-message {
+  @include font(16px, 26px, 400);
+  color: var(--orange)
+}

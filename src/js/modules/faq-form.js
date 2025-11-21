@@ -3,7 +3,7 @@ const form = document.querySelector('[data-modal-faq-form]');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    clearErrors(form); // удаляем старые ошибки
+    clearErrors(form);
 
     const formData = new FormData(form);
 
@@ -20,6 +20,20 @@ form.addEventListener('submit', async (e) => {
             return;
         }
 
+        // Все остальные 4xx
+        if (response.status >= 400 && response.status < 500 && response.status !==422 && response.status !== 419) {
+            let message = 'Ошибка при отправке формы. Проверьте данные и попробуйте снова.';
+
+            try {
+                const data = await response.json();
+                if (data?.message) message = data.message;
+            } catch (_) {
+            }
+
+            showGlobalError(form, message);
+            return;
+        }
+
         // 422 — ошибки валидации
         if (response.status === 422) {
             const data = await response.json();
@@ -27,7 +41,13 @@ form.addEventListener('submit', async (e) => {
             return;
         }
 
-        // 500
+        // 500+
+        if (response.status === 419) {
+            showGlobalError(form, 'CSRF token mismatch.');
+            return;
+        }
+
+        // 500+
         if (response.status >= 500) {
             showGlobalError(form, 'Что-то пошло не так. Попробуйте чуть позже.');
         }
@@ -70,11 +90,13 @@ function clearErrors(form) {
 
 // Глобальное сообщение (успех/ошибка)
 function showSuccess(form, message) {
-    form.innerHTML = `
-    <div class="form-success">
-      <p>${message}</p>
-    </div>
-  `;
+    form.classList.add('is-hidden');
+    const el = document.createElement('div');
+    el.className = 'form-success';
+    el.innerHTML = `<p>${message}</p>`;
+
+    form.insertAdjacentElement('afterend', el);
+
 }
 
 function showGlobalError(form, message) {
