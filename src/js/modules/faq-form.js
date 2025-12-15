@@ -1,9 +1,13 @@
 const form = document.querySelector('[data-modal-faq-form]');
+const submitButton = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    if (submitButton.disabled) return;
+
     clearErrors(form);
+    submitButton.disabled = true;
 
     const formData = new FormData(form);
 
@@ -54,6 +58,8 @@ form.addEventListener('submit', async (e) => {
 
     } catch (e) {
         showGlobalError(form, 'Ошибка сети. Попробуйте позже.');
+    } finally {
+        submitButton.disabled = false;
     }
 });
 
@@ -82,8 +88,8 @@ function showFieldError(input, message) {
 
 // Очистка старых ошибок
 function clearErrors(form) {
-    form.querySelectorAll('.field-error').forEach((el) => el.classList.remove('field-error'));
-    form.querySelectorAll('.field-error-message').forEach((el) => el.remove());
+    form.querySelectorAll('.field_error').forEach((el) => el.classList.remove('field_error'));
+    form.querySelectorAll('.field__error-message').forEach((el) => el.remove());
     const globalMessage = form.querySelector('.form-global-message');
     if (globalMessage) globalMessage.remove();
 }

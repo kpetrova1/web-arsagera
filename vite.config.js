@@ -42,7 +42,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/faq/store-test': {
-        target: 'https://webhook.site/9077b924-317b-47a5-b7f3-f40c48f6de40',
+        target: 'https://webhook.site/cfb268a2-2389-4ae2-ba90-c7641dfda168',
         changeOrigin: true,
         rewrite: (path) => path.replace('/faq/store-test', '')
       }
